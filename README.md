@@ -12,3 +12,38 @@
 
 -----
 
+Develop.AllPlayers.com
+======================
+
+This is the code and data behind <http://develop.allplayers.com>.
+
+All content can be found in the `_posts/` directory.
+
+
+Dependencies, Getting Started
+-----------------------------
+
+Install [Jekyll](https://github.com/mojombo/jekyll) and rake (both require Ruby):
+
+    gem install jekyll rake
+
+Once you've done that, run `rake` to compile the site:
+
+    rake
+
+This should start a web server at <http://localhost:3000> which is now
+serving your site, updating whenever you make changes.
+
+Contributing
+------------
+
+To contribute to the develop.allplayers.com site, you can fork the repository,
+push your changes into it and create an Issue:
+<http://github.com/AllPlayers/develop.allplayers.com/issues>
+
+
+Attribution
+-----------
+
+Note: Thanks to [develop.github.com](https://github.com/github/develop.github.com)
+
