@@ -1,0 +1,36 @@
+---
+layout: default
+title: General API Information
+---
+
+# General API Information #
+
+## Schema ##
+
+All API access is over HTTP and starts with
+
+    https://www.allplayers.com/api/v1/rest/*.:format
+
+where `:format` is one of 'json', 'xml' or 'yaml', specifying what the
+response data should be formatted in.
+
+A Web Application Description ([WADL](http://www.w3.org/Submission/wadl/)) for [AllPlayers.com](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) can be found at
+
+    https://www.allplayers.com/api/v1/rest/wadl/describe.xml
+
+## Authentication ##
+
+You can use HTTP Basic Auth to authenticate as a AllPlayers.com user. Note that all requests that need authentication should include the Authentication header.  Unauthenticated requests will return 404 to prevent any sort of private information leakage.
+
+## Secure Access ##
+
+You can access any API call over HTTPS.
+
+## Limitations ##
+
+Currently we are limiting API calls to 60 per minute.  This may change
+in the future, or possibly per user at some point, but if you try to
+access the API more than 60 times in a minute, it will start giving
+you "access denied" errors.
+
+Additionally to protect form submissions there is a CAPTCHA mechanism to allow connecting client apps to continue using the API when requests are invalidated due to abuse protection.
