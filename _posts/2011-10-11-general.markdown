@@ -22,6 +22,10 @@ A Web Application Description ([WADL](http://www.w3.org/Submission/wadl/)) for [
 
 You can use HTTP Basic Auth to authenticate as a AllPlayers.com user. Note that all requests that need authentication should include the Authentication header.  Unauthenticated requests will return 404 to prevent any sort of private information leakage.
 
+## Universally unique identifiers ##
+
+AllPlayers.com uses [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) to uniquely identify all objects in the system. Referencing `{uuid}` in documentation is a placeholder for the 32 digit identifier (e.g. `550e8400-e29b-41d4-a716-446655440000`).
+
 ## Secure Access ##
 
 You can access any API call over HTTPS.

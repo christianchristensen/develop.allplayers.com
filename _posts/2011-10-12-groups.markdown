@@ -1,0 +1,52 @@
+---
+layout: default
+title: Groups
+---
+
+# Groups API
+
+API for accessing and modifying groups.
+
+## Getting Group Information
+
+You can get the group information by listing all groups or by specific search terms
+
+    /groups [GET]
+
+<pre class="terminal">
+$ curl https://www.allplayers.com/api/v1/rest/groups.json?search="Badminton+Devs"
+[
+  {
+    "accept_amex": "Accept",
+    "activity_level": "10",
+    "uri": "https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
+    "location": {
+      "city": "Irving",
+      "latitude": "32.860409",
+      "zip": "76039",
+      "country": "us",
+      "street": "600 E. Las Colinas Blvd.",
+      "longitude": "-96.930037",
+      "state": "TX"
+    },
+    "list_in_directory": "0",
+    "title": "Dev pit badminton",
+    "uuid": "fb8544ba-f368-11e0-855a-12313d0118c2",
+    "url": "https://www.pdup.allplayers.com/g/dev-pit-badminton",
+    "logo": "https://d2v81b0git4m95.cloudfront.net/sites/default/files/imagecache/profile_small/group_content_logo/logo1.png",
+    "secondary_color": "4682B4",
+    "node_status": "1",
+    "primary_color": "CD5C5C",
+    "approved_for_payment": "Approved",
+    "description": "Badminton Devs",
+    "group_mates_enabled": "Group Mates",
+    "approved_for_idverify": "Not approved",
+    "groups_above_uuid": [
+      "fb870f84-f368-11e0-855a-12313d0118c2"
+    ],
+    "registration_fees_enabled": "Fee (Approval Required)",
+    "active": "Active"
+  }
+]
+</pre>
+
