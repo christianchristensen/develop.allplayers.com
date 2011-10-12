@@ -1,0 +1,373 @@
+<table>
+  <tr>
+    <th>Resource</th>
+
+    <th>Method</th>
+
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp7856">https://www.allplayers.com/api/v1/rest/users</a></td>
+
+    <td class="summary"><a href="#fields">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Search Users<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp295104">https://www.allplayers.com/api/v1/rest/users/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve full user information<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp306080">https://www.allplayers.com/api/v1/rest/users/{uuid}/groups</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Show groups user is a member
+    of.<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp312528">https://www.allplayers.com/api/v1/rest/users/{uuid}/friends</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Show friends for a given user<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp319088">https://www.allplayers.com/api/v1/rest/users/{uuid}/groupmates</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Show groupmates for a given
+    user<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp325648">https://www.allplayers.com/api/v1/rest/users/{uuid}/events</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of events for this
+    user<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp344912">https://www.allplayers.com/api/v1/rest/groups</a></td>
+
+    <td class="summary"><a href="#search">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Search Groups<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp345168">https://www.allplayers.com/api/v1/rest/groups/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Get Group information by Group
+    ID<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp348784">https://www.allplayers.com/api/v1/rest/groups/{uuid}/albums</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of albums for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp354368">https://www.allplayers.com/api/v1/rest/groups/{uuid}/events</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of events for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp361696">https://www.allplayers.com/api/v1/rest/groups/{uuid}/members</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of members for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp366880">https://www.allplayers.com/api/v1/rest/groups/photos</a></td>
+
+    <td class="summary"><a href="#gid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of photos for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp384816">https://www.allplayers.com/api/v1/rest/albums/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">get album by uuid<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp389344">https://www.allplayers.com/api/v1/rest/albums/{uuid}/photos</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">get album photos by uuid<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp396512">https://www.allplayers.com/api/v1/rest/photos/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Get photo by uuid<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp400352">https://www.allplayers.com/api/v1/rest/messages</a></td>
+
+    <td class="summary"><a href="#box">GET</a><br />
+    <br />
+    <a href="#id">POST</a><br />
+    <br /></td>
+
+    <td class="summary">Messages Index<br />
+    <br />
+    POST: Send A New Message, Create New Thread or Reply To A
+    thread<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp400720">https://www.allplayers.com/api/v1/rest/messages/{id}</a></td>
+
+    <td class="summary"><a href="#id">GET</a><br />
+    <br />
+    <a href="#id">PUT</a><br />
+    <br />
+    <a href="#id">DELETE</a><br />
+    <br /></td>
+
+    <td class="summary">Retrieve a single message or thread<br />
+    <br />
+    PUT: Update a messages status<br />
+    <br />
+    Delete: delete something, will find out what<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp455520">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Retrieve Event by uuid<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp458864">https://www.allplayers.com/api/v1/rest/resources/{uuid}</a></td>
+
+    <td class="summary"><a href="#uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Retrieve Resource by Resource
+    UUID<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+</table>

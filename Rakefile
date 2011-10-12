@@ -7,4 +7,6 @@ task :gensite do
   end
 end
 
+# TODO: Add rake task to call/manipulate scripts/getwadltohtml.sh
+
 task :default => :gensite
