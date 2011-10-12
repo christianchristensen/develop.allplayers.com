@@ -50,3 +50,20 @@ $ curl https://www.allplayers.com/api/v1/rest/groups.json?search="Badminton+Devs
 ]
 </pre>
 
+    /groups/{uuid} [GET]
+
+<pre class="terminal">
+$ curl https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2.json
+{
+  ...
+  "uri": "https://www.pdup.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
+  "location": {
+    "city": "Irving",
+    ...
+  },
+  "list_in_directory": "0",
+  "title": "Dev pit badminton",
+  "uuid": "fb8544ba-f368-11e0-855a-12313d0118c2",
+  ...
+}
+</pre>
