@@ -75,4 +75,12 @@ $(function() {
   var currentYear = (new Date).getFullYear();
   $("#year").text( (new Date).getFullYear() );
 
+  // HACK: Hide the third column on the public_wadl table
+  $("#public_wadl td:nth-child(3)").hide();
+  $("#public_wadl th:nth-child(3)").hide();
+  $("#togglePublicAPIDescription").click(function(event){
+    $("#public_wadl td:nth-child(3)").toggle();
+    $("#public_wadl th:nth-child(3)").toggle();
+    event.preventDefault();
+  });
 });

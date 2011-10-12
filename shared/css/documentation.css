@@ -916,8 +916,12 @@ div.expandable > ul h3 > a.expanded:hover {
 /****************************/
 
 div#public_wadl > table {
-  border: 1px solid black;
+  border: 0px solid grey;
+  width: 100%;
+}
+
+.summarySeparator {
+  border: 1px solid grey;
 }
 
 /* @end */
-
