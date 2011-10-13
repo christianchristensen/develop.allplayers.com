@@ -1,0 +1,92 @@
+---
+layout: default
+title: Users
+---
+
+# Users API
+
+API for accessing and modifying users.
+
+## Getting User Information
+
+You can get the group information by listing all groups or by specific search terms
+
+    /users/{uuid} [GET]
+
+<pre class="terminal">
+$ curl -b cjar https://www.allplayers.com/api/v1/rest/users/38da85f0-f5d0-11e0-b506-3213cbbf5b8c
+{
+  "sizes": [
+
+  ],
+  "address": [
+
+  ],
+  "uri": "https://www.allplayers.com/api/v1/rest/users/38da85f0-f5d0-11e0-b506-3213cbbf5b8c",
+  "nickname": "FirstName",
+  "uuid": "38da85f0-f5d0-11e0-b506-3213cbbf5b8c",
+  "username": "FirstName LastName",
+  "gender": "male",
+  "lastname": "LastName",
+  "profile_url": "https://www.allplayers.com/users/usertest2",
+  "phone": [
+
+  ],
+  "firstname": "FirstName",
+  "emergency_contact": {
+    "emergency_address": [
+
+    ]
+  },
+  "status": "1",
+  "picture": "sites/all/themes/allplayers960/images/avatar_selection/Baseball_Ball.png",
+  "email": "usertest2@example.com"
+}
+</pre>
+
+Required fields
+
+*  `firstname` User first name
+*  `lastname` User last name
+*  `email` User email address
+*  `gender` User gender
+*  `birthday` User birth date
+   *  `year`
+   *  `month`
+   *  `day`
+*  `password` User password
+
+You can also create new users by POSTing parameters
+
+    /users [POST]
+
+<pre class="terminal">
+$ curl -H "CAPTCHA_TOKEN: bd4586faf8a26a3bae9ef44b7049a14e" -H "CAPTCHA_ANSWER: 12" -d "firstname=FirstName&lastname=LastName&email=usertest2@example.com&gender=M&birthday[year]=1981&birthday[month]=10&birthday[day]=20&password=F@ncyP@ssw0rd" \
+  https://www.allplayers.com/api/v1/rest/users.json
+{
+  "sizes": [
+
+  ],
+  "address": [
+
+  ],
+  "uri": "https://www.allplayers.com/api/v1/rest/users/38da85f0-f5d0-11e0-b506-3213cbbf5b8c",
+  "nickname": "FirstName",
+  "uuid": "38da85f0-f5d0-11e0-b506-3213cbbf5b8c",
+  "username": "FirstName LastName",
+  "gender": "male",
+  "lastname": "LastName",
+  "profile_url": "https://www.allplayers.com/user/7060",
+  "phone": [
+
+  ],
+  "firstname": "FirstName",
+  "emergency_contact": {
+    "emergency_address": [
+
+    ]
+  },
+  "picture": "sites/all/themes/allplayers960/images/avatar_selection/Baseball_Ball.png",
+  "email": "usertest2@example.com"
+}
+</pre>
