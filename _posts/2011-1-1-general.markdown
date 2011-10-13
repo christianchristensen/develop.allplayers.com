@@ -11,7 +11,7 @@ All API access is over HTTP and starts with
 
     https://www.allplayers.com/api/v1/rest/*.:format
 
-where `:format` is one of 'json', 'xml' or 'yaml', specifying what the
+where `:format` is one of 'json', 'jsonp', 'xml' or 'yaml', specifying what the
 response data should be formatted in.
 
 A Web Application Description ([WADL](http://www.w3.org/Submission/wadl/)) for [AllPlayers.com](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) can be found at
@@ -72,6 +72,45 @@ https://www.allplayers.com/api/v1/rest/users/login.json
 ## Universally unique identifiers ##
 
 AllPlayers.com uses [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) to uniquely identify all objects in the system. Referencing `{uuid}` in documentation is a placeholder for the 32 digit identifier (e.g. `550e8400-e29b-41d4-a716-446655440000`).
+
+## JSON callbacks ##
+
+If you send a `:format` of `.jsonp` a 'callback' variable to any call, it will wrap the result JSON in that function, so you can automatically execute it.
+
+<pre class="terminal">
+$ curl https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2.jsonp?callback=myJsFunction
+myJsFunction({
+  "accept_amex": "Accept",
+  "activity_level": "14",
+  "uri": "https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
+  "location": {
+    "city": "Irving",
+    "latitude": "32.860409",
+    "zip": "76039",
+    "country": "us",
+    "street": "600 E. Las Colinas Blvd.",
+    "longitude": "-96.930037",
+    "state": "TX"
+  },
+  "list_in_directory": "0",
+  "title": "Dev pit badminton",
+  "uuid": "fb8544ba-f368-11e0-855a-12313d0118c2",
+  "url": "https://www.allplayers.com/g/dev-pit-badminton",
+  "logo": "https://d2v81b0git4m95.cloudfront.net/sites/default/files/imagecache/profile_small/group_content_logo/logo1.png",
+  "secondary_color": "4682B4",
+  "node_status": "1",
+  "primary_color": "CD5C5C",
+  "approved_for_payment": "Approved",
+  "description": "Badminton Devs",
+  "group_mates_enabled": "Group Mates",
+  "approved_for_idverify": "Not approved",
+  "groups_above_uuid": [
+    "fb870f84-f368-11e0-855a-12313d0118c2"
+  ],
+  "registration_fees_enabled": "Fee (Approval Required)",
+  "active": "Active"
+});
+</pre>
 
 ## Secure Access ##
 
