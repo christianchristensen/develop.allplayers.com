@@ -21,10 +21,12 @@ p {
 }
 
 h1 {
-  font-size: 20px;
-  border-bottom: 1px solid #cccccc;
+  font-size: 22px;
+  border-bottom: 1px dashed #cccccc;
   padding: .5em 0;
   margin: 1em 0 1em;
+  color: #9F0631;
+  font-weight: normal;
 }
 
 h1:first-child {
@@ -33,8 +35,9 @@ h1:first-child {
 
 h2 {
   font-size: 16px;
-  color: #333;
+  color: #2C7892;
   margin: 2em auto 1em;
+/*  font-weight: normal;*/
 }
 
   body.api .content h2 {
@@ -62,7 +65,7 @@ h6 {
 }
 
 a {
-  color: #4183C4;
+  color: #aba01a;
   text-decoration: none;
 }
 
@@ -113,7 +116,7 @@ a img {
   margin-bottom: 0;
   clear: both;
   height: 91px;
-  background: white url(../images/background-v2.png) 0 0 repeat-x;
+  background: #2C7892 url(../images/background-v2b.png) repeat-x left top;
 }
 
 #header {
@@ -552,14 +555,14 @@ p code {
 code {white-space: nowrap;}
 
 pre {
-  border: 1px solid #cacaca;
+  border: 0px solid #cacaca;
   line-height: 1.2em;
   font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   padding: 10px;
   overflow:auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
