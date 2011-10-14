@@ -27,7 +27,7 @@ You can use HTTP Basic Auth to authenticate as a AllPlayers.com user. Note that 
 
 <pre class="terminal">
 $ curl -c cjar -d 'username=USERNAME&password=PASSWORD' \
-https://www.allplayers.com/api/v1/rest/users/login.json
+  https://www.allplayers.com/api/v1/rest/users/login.json
 {
   "session_name": "SESSac971aed20589e9c28ae3ae5e510ef9c",
   "sessid": "4841f7aaba8b65a19a42012d48d2e3b6",
@@ -134,14 +134,18 @@ Sequence:
 3. Request to API with headers: `X-ALLPLAYERS-CAPTCHA-TOKEN` / `X-ALLPLAYERS-CAPTCHA-SOLUTION`
 
 <pre class="terminal">
-$ curl -d "firstname=FirstName&lastname=LastName&email=usertest5@..." https://www.allplayers.com/api/v1/rest/users.json
+$ curl -d "firstname=FirstName&lastname=LastName&email=usertest5@..." \
+  https://www.allplayers.com/api/v1/rest/users.json
 {
   "captcha_token": "5aa9809ebd17f57916110ef46af90b6c",
   "captcha_problem": "2 + 10 = ",
   "form_errors": "Invalid captcha, please validate by solving math problem and sending solution, you will need to add x-allplayers-catpcha-token and x-allplayers-captcha-solution to the headers."
 }
 
-$ curl -H "X-ALLPLAYERS-CAPTCHA-TOKEN: 5aa9809ebd17f57916110ef46af90b6c" -H "X-ALLPLAYERS-CAPTCHA-SOLUTION: 12" -d "firstname=FirstName&lastname=LastName&email=usertest5@..." https://www.allplayers.com/api/v1/rest/users.json
+$ curl -H "X-ALLPLAYERS-CAPTCHA-TOKEN: 5aa9809ebd17f57916110ef46af90b6c" \
+  -H "X-ALLPLAYERS-CAPTCHA-SOLUTION: 12" \
+  -d "firstname=FirstName&lastname=LastName&email=usertest5@..." \
+  https://www.allplayers.com/api/v1/rest/users.json
 {
   ...
   "nickname": "FirstName",
