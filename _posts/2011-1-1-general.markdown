@@ -123,4 +123,29 @@ in the future, or possibly per user at some point, but if you try to
 access the API more than 60 times in a minute, it will start giving
 you "access denied" errors.
 
-Additionally to protect form submissions there is a CAPTCHA mechanism to allow connecting client apps to continue using the API when requests are invalidated due to abuse protection.
+Additionally to protect form submissions there is a CAPTCHA mechanism
+to allow connecting client apps to continue using the API when
+requests are invalidated due to abuse.
+
+Sequence:
+
+1. Request to API
+2. **406** Response Error "Invalid captcha..."
+3. Request to API with headers: `X-ALLPLAYERS-CAPTCHA-TOKEN` / `X-ALLPLAYERS-CAPTCHA-SOLUTION`
+
+<pre class="terminal">
+$ curl -d "firstname=FirstName&lastname=LastName&email=usertest5@..." https://www.allplayers.com/api/v1/rest/users.json
+{
+  "captcha_token": "5aa9809ebd17f57916110ef46af90b6c",
+  "captcha_problem": "2 + 10 = ",
+  "form_errors": "Invalid captcha, please validate by solving math problem and sending solution, you will need to add x-allplayers-catpcha-token and x-allplayers-captcha-solution to the headers."
+}
+
+$ curl -H "X-ALLPLAYERS-CAPTCHA-TOKEN: 5aa9809ebd17f57916110ef46af90b6c" -H "X-ALLPLAYERS-CAPTCHA-SOLUTION: 12" -d "firstname=FirstName&lastname=LastName&email=usertest5@..." https://www.allplayers.com/api/v1/rest/users.json
+{
+  ...
+  "nickname": "FirstName",
+  "lastname": "LastName",
+  ...
+}
+</pre>
