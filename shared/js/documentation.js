@@ -83,4 +83,27 @@ $(function() {
     $("#public_wadl th:nth-child(3)").toggle();
     event.preventDefault();
   });
+
+  // "NEAT" HACK: Catch the links on the frontpage and link into their specific pages
+  var url_doc_map = {
+    "other": "general.html",
+    "users": "users.html",
+    "groups": "groups.html"
+    // Add more here...
+  };
+  $("#public_wadl").click(function(event) {
+    // TODO: Is this the proper selection from the delegated click event?
+    var selectedURL = event.originalEvent.target.firstChild.data;
+    if (selectedURL !== undefined) {
+      // Default: just goto the general API info page
+      // window.location = window.location.origin + window.location.pathname + url_doc_map["other"];
+      // Search for defined info in the url map
+      jQuery.each(url_doc_map, function(key, value) {
+        if (new RegExp("/" + key + "/").exec(selectedURL) !== null) {
+          window.location = window.location.origin + window.location.pathname + value;
+        }
+      });
+      event.preventDefault();
+    }
+  });
 });
