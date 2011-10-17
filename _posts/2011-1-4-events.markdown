@@ -11,6 +11,8 @@ API for accessing and modifying events.
 
 You can get the group information by listing all groups or by specific search terms
 
+<a id="/events/{uuid}"></a>
+
     /events/{uuid} [GET]
 
 <pre class="terminal">
