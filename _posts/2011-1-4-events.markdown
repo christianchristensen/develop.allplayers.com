@@ -1,0 +1,43 @@
+---
+layout: default
+title: Events
+---
+
+# Events API
+
+API for accessing and modifying events.
+
+## Getting Event Information
+
+You can get the group information by listing all groups or by specific search terms
+
+    /events/{uuid} [GET]
+
+<pre class="terminal">
+$ curl https://www.allplayers.com/api/v1/rest/events/5df711be-f611-11e0-a44b-12313d04fc0f
+{
+...
+  "category": "",
+  "title": "Halloween!!",
+  "uuid": "5df711be-f611-11e0-a44b-12313d04fc0f",
+  "competitors": {
+    "": {
+      "label": null,
+      "event_outcome": null,
+      "score": null
+    }
+  },
+  "description": "",
+  "resource_ids": [
+
+  ],
+  "date_time": [
+    {
+      "date_end_timestamp": 1320123540,
+      "date_start": "2011-10-31T17:00:00 -05:00",
+      "date_end": "2011-10-31T23:59:00 -05:00",
+      "date_start_timestamp": 1320098400
+    }
+  ]
+}
+</pre>
