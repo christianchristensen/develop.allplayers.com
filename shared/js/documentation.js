@@ -84,8 +84,7 @@ $(function() {
     event.preventDefault();
   });
 
-  // "NEAT" HACK: Catch the links on the frontpage and link into their specific pages
-  // TODO: Change this to *not* be a click event and rather a replace of "a href" on page load.
+  // Since the api list is auto-gened - auto link to mapped help pages
   var url_doc_map = {
     "other"     : "general.html",
     "users"     : "users.html",
@@ -97,19 +96,13 @@ $(function() {
     // "messages"  : "messages.html"
     // Add more here...
   };
-  $("#public_wadl").click(function(event) {
-    // TODO: Is this the proper selection from the delegated click event?
-    var selectedURL = event.originalEvent.target.firstChild.data;
-    if (selectedURL !== undefined) {
-      // Default: just goto the general API info page
-      // window.location = window.location.origin + window.location.pathname + url_doc_map["other"];
-      // Search for defined info in the url map
-      jQuery.each(url_doc_map, function(key, value) {
-        if (new RegExp("/" + key + "/").exec(selectedURL) !== null) {
-          window.location = window.location.origin + window.location.pathname + value + "#" + selectedURL;
-        }
-      });
-      event.preventDefault();
-    }
+  $("#public_wadl td:nth-child(1) a").each(function(index){
+    var possibleURLObject = $(this);
+    jQuery.each(url_doc_map, function(key, value) {
+      if (possibleURLObject.text().indexOf(key) !== -1) {
+        // We have a match to potential doc page: rewrite the href
+        possibleURLObject.attr('href', "/" + value + "#" + possibleURLObject.text());
+      }
+    });
   });
 });
