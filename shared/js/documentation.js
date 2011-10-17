@@ -88,9 +88,9 @@ $(function() {
   var url_doc_map = {
     "other"     : "general.html",
     "users"     : "users.html",
-    "groups"    : "groups.html"
-    // "events"    : "events.html",
-    // "resources" : "events.html",
+    "groups"    : "groups.html",
+    "events"    : "events.html",
+    "resources" : "events.html"
     // "photos"    : "photos.html",
     // "albums"    : "photos.html",
     // "messages"  : "messages.html"
@@ -98,10 +98,11 @@ $(function() {
   };
   $("#public_wadl td:nth-child(1) a").each(function(index){
     var possibleURLObject = $(this);
+    var possibleURL = possibleURLObject.text().substring(possibleURLObject.text().indexOf("api/v1/rest") + "api/v1/rest".length);
     jQuery.each(url_doc_map, function(key, value) {
-      if (possibleURLObject.text().indexOf(key) !== -1) {
+      if (possibleURL.indexOf(key) === 1) {
         // We have a match to potential doc page: rewrite the href
-        possibleURLObject.attr('href', "/" + value + "#" + possibleURLObject.text());
+        possibleURLObject.attr('href', "/" + value + "#" + possibleURL);
       }
     });
   });
