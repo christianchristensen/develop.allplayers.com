@@ -85,10 +85,16 @@ $(function() {
   });
 
   // "NEAT" HACK: Catch the links on the frontpage and link into their specific pages
+  // TODO: Change this to *not* be a click event and rather a replace of "a href" on page load.
   var url_doc_map = {
-    "other": "general.html",
-    "users": "users.html",
-    "groups": "groups.html"
+    "other"     : "general.html",
+    "users"     : "users.html",
+    "groups"    : "groups.html"
+    // "events"    : "events.html",
+    // "resources" : "events.html",
+    // "photos"    : "photos.html",
+    // "albums"    : "photos.html",
+    // "messages"  : "messages.html"
     // Add more here...
   };
   $("#public_wadl").click(function(event) {
@@ -100,7 +106,7 @@ $(function() {
       // Search for defined info in the url map
       jQuery.each(url_doc_map, function(key, value) {
         if (new RegExp("/" + key + "/").exec(selectedURL) !== null) {
-          window.location = window.location.origin + window.location.pathname + value;
+          window.location = window.location.origin + window.location.pathname + value + "#" + selectedURL;
         }
       });
       event.preventDefault();
