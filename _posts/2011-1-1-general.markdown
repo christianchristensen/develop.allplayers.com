@@ -26,7 +26,7 @@ You can use HTTP Basic Auth to authenticate as a AllPlayers.com user. Note that 
     /users/login [POST]
 
 <pre class="terminal">
-$ curl -c cjar -d 'username=USERNAME&password=PASSWORD' \
+$ curl -c cjar -d 'email=EMAIL&password=PASSWORD' \
   https://www.allplayers.com/api/v1/rest/users/login.json
 {
   "session_name": "SESSac971aed20589e9c28ae3ae5e510ef9c",

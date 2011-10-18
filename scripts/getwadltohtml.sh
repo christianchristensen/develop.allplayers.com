@@ -8,7 +8,7 @@
 # Download WADL and Stylesheet (auth and non-auth)
 curl -k https://www.pdup.allplayers.com/wadl.xsl -o wadl.xsl
 curl -k https://www.pdup.allplayers.com/?q=api/v1/rest/wadl/describe.xml -o describe_nonauth.xml
-curl -k -c cjar -d 'username=USERNAME&password=PASSWORD' https://www.pdup.allplayers.com/api/v1/rest/users/login.json
+curl -k -c cjar -d 'email=EMAIL&password=PASSWORD' https://www.pdup.allplayers.com/api/v1/rest/users/login.json
 curl -k -b cjar https://www.pdup.allplayers.com/?q=api/v1/rest/wadl/describe.xml -o describe_auth.xml
 
 # Convert the WADL XML to HTML
