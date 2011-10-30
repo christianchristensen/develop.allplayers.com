@@ -32,7 +32,7 @@ $ curl https://www.allplayers.com/api/v1/rest/groups.json?search="Badminton+Devs
     "list_in_directory": "0",
     "title": "Dev pit badminton",
     "uuid": "fb8544ba-f368-11e0-855a-12313d0118c2",
-    "url": "https://www.pdup.allplayers.com/g/dev-pit-badminton",
+    "url": "https://www.allplayers.com/g/dev-pit-badminton",
     "logo": "https://d2v81b0git4m95.cloudfront.net/sites/default/files/imagecache/profile_small/group_content_logo/logo1.png",
     "secondary_color": "4682B4",
     "node_status": "1",
@@ -58,7 +58,7 @@ $ curl https://www.allplayers.com/api/v1/rest/groups.json?search="Badminton+Devs
 $ curl https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2.json
 {
   ...
-  "uri": "https://www.pdup.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
+  "uri": "https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
   "location": {
     "city": "Irving",
     ...

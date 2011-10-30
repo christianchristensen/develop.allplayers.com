@@ -39,13 +39,13 @@ $ curl -c cjar -d 'email=EMAIL&password=PASSWORD' \
       "street": "600 E. Las Colinas Blvd., Ste. 1525",
       "state": "TX"
     },
-    "uri": "https://www.pdup.allplayers.com/api/v1/rest/users/c871c01c-f368-11e0-855a-12313d0118c2",
+    "uri": "https://www.allplayers.com/api/v1/rest/users/c871c01c-f368-11e0-855a-12313d0118c2",
     "nickname": "Chris",
     "uuid": "c871c01c-f368-11e0-855a-12313d0118c2",
     "username": "Chris Christensen",
     "gender": "male",
     "lastname": "Christensen",
-    "profile_url": "https://www.pdup.allplayers.com/users/christianchristensen",
+    "profile_url": "https://www.allplayers.com/users/christianchristensen",
     "phone": {
       "phone": "2142349770"
     },
