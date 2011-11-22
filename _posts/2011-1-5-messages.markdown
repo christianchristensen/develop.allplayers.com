@@ -103,8 +103,8 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json?ty
 
 You can update a message's or a thread's read status by sending a PUT request to the specific message or thread id.  However it is important to note that the type parameter is passed in the body of the request this time instead of path
 
-*'status' *Is the message new or not.  (1 = new, 0 = read)*
-*'type' *thread or msg*
+* `status` *Is the message new or not.  (1 = new, 0 = read)*
+* `type` *thread or msg*
 
 	/messages/37509 [PUT]
 
@@ -119,19 +119,50 @@ You can delete a message by sending a DELETE request to the message or thread pa
 
 You can create a new thread or reply to a message in a thread by sending a POST request.
 
-	/messages/ [POST]
+	/messages [POST]
 
 The system will take the body you send in the request and behave accordingly, deciding whether to reply to a message in a thread, or to create a new one.  
 
 If you send:
 
-*'recipients' *an array of message recipient uuids*
-*'subject' 
-*'body'
+* `recipients` *an array of message recipient uuids*
+* `subject` 
+* `body`
 
-The system will know that you would like to create a new message.  However, sending:
+The system will know that you would like to create a new message.  
 
-*'thread_id'
-*'body'
+<pre class="terminal">
+curl -b cjar -d 'recipients[0]=90967468-f61e-11e0-98df-12313d18191a&subject=test&body=one' \http://www.allplayers.local:8080/api/v1/rest/messages.json
+{
+	"subject":"test",
+	"body":"one",
+	"recipients":{
+		"1":"Maksim Pecherskiy"
+	},
+	"timestamp":1321989498,
+	"mid":"37533",
+	"thread_id":"37533"
+}
+</pre>
 
-Will reply to a message in a given thread id.  
+
+However, sending:
+
+* `thread_id`
+* `body`
+
+Will reply to a message in a given thread id:
+
+<pre class="terminal">
+{
+	"body":"one two three",
+	"timestamp":1321990032,
+	"thread_id":"37509",
+	"recipients":{
+		"1":"Maksim Pecherskiy"
+	},
+	"subject":"Hello World",
+	"mid":"37534"
+}
+</pre>
+
