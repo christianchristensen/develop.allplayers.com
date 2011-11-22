@@ -52,9 +52,52 @@ You can retrieve a thread by passing a thread id with no parameters
 
     /messages/37509 [GET]
 
+<pre class="terminal">
+curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json
+
+{
+	"37509":{
+		"mid":"37509",
+		"subject":"Hello World",
+		"body":"Whatcha up to?",
+		"timestamp":"1320853798",
+		"is_new":"1",
+		"sender":"Maksim Pecherskiy",
+		"sender_uuid":"90967468-f61e-11e0-98df-12313d18191a",
+		"uri":"http:\/\/www.allplayers.local:8080\/api\/v1\/rest\/messages\/37509?type=msg"
+	}
+	"37511":{
+		"mid":"37511",
+		"subject":"Hello World",
+		"body":"Hope all is going well for you",
+		"timestamp":"1320854798",
+		"is_new":"1",
+		"sender":"Roberto Gonzales",
+		"sender_uuid":"90937468-f61e-11e0-98df-12313d18191a",
+		"uri":"http:\/\/www.allplayers.local:8080\/api\/v1\/rest\/messages\/37509?type=msg"
+	}
+}
+</pre>
+
 Or a specific message by passing type=msg parameter
 
 	/messages/37509?type=msg [GET]
+
+<pre class="terminal">
+curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json?type=msg
+
+{
+	"mid":"37509",
+	"subject":"Hello World",
+	"body":"Whatcha up to?",
+	"timestamp":"1320853798",
+	"is_new":"1",
+	"thread_id":"37509",
+	"sender":"Maksim Pecherskiy",
+	"sender_uuid":"90818850-f61e-11e0-98df-12313d18191a"
+}
+</pre>
+
 
 ##Updating Messages Status
 
