@@ -154,6 +154,8 @@ However, sending:
 Will reply to a message in a given thread id:
 
 <pre class="terminal">
+curl -b cjar -d 'thread_id=37509&body=one two three' \http://www.allplayers.local:8080/api/v1/rest/messages.json
+
 {
 	"body":"one two three",
 	"timestamp":1321990032,
