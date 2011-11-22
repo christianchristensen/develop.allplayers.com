@@ -85,17 +85,6 @@ $(function() {
   });
 
   // Since the api list is auto-gened - auto link to mapped help pages
-  /*var url_doc_map = {
-    "other"     : "general.html",
-    "users"     : "users.html",
-    "groups"    : "groups.html",
-    "events"    : "events.html",
-    "resources" : "events.html",
-    // "photos"    : "photos.html",
-    // "albums"    : "photos.html",
-     "messages"  : "messages.html"
-    // Add more here...
-  };*/
   var url_doc_map = new Object;
   $('.sidebar-module ul li').each(function(index, value){
   	var url = $('a' , value).attr('href');
