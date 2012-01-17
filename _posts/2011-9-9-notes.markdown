@@ -11,5 +11,5 @@ published: false
    *  Users:  `.../users/uuid/{uuid}`
 *  [cURL PHP Snippets and Example](https://gist.github.com/10c96e8621540bbc9ec4)
    *  Note:
-      *  When passing array parameters in a `POST` ensure to collapse the array items using `[http_build_query](http://php.net/manual/en/function.http-build-query.php)`
+      *  When passing array parameters in a `POST` ensure to collapse the array items using [`http_build_query`](http://php.net/manual/en/function.http-build-query.php)
 
