@@ -53,7 +53,7 @@ You can retrieve a thread by passing a thread id with no parameters
     /messages/37509 [GET]
 
 <pre class="terminal">
-curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json
+curl -b cjar http://www.allplayers.com/api/v1/rest/messages/37509.json
 
 {
 	"37509":{
@@ -64,7 +64,7 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json
 		"is_new":"1",
 		"sender":"Maksim Pecherskiy",
 		"sender_uuid":"90967468-f61e-11e0-98df-12313d18191a",
-		"uri":"http:\/\/www.allplayers.local:8080\/api\/v1\/rest\/messages\/37509?type=msg"
+		"uri":"http:\/\/www.allplayers.com\/api\/v1\/rest\/messages\/37509?type=msg"
 	}
 	"37511":{
 		"mid":"37511",
@@ -74,7 +74,7 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json
 		"is_new":"1",
 		"sender":"Roberto Gonzales",
 		"sender_uuid":"90937468-f61e-11e0-98df-12313d18191a",
-		"uri":"http:\/\/www.allplayers.local:8080\/api\/v1\/rest\/messages\/37509?type=msg"
+		"uri":"http:\/\/www.allplayers.com\/api\/v1\/rest\/messages\/37509?type=msg"
 	}
 }
 </pre>
@@ -84,7 +84,7 @@ Or a specific message by passing type=msg parameter
 	/messages/37509?type=msg [GET]
 
 <pre class="terminal">
-curl -b cjar http://www.allplayers.local:8080/api/v1/rest/messages/37509.json?type=msg
+curl -b cjar http://www.allplayers.com/api/v1/rest/messages/37509.json?type=msg
 
 {
 	"mid":"37509",
@@ -132,7 +132,7 @@ If you send:
 The system will know that you would like to create a new message.  
 
 <pre class="terminal">
-curl -b cjar -d 'recipients[0]=90967468-f61e-11e0-98df-12313d18191a&subject=test&body=one' \http://www.allplayers.local:8080/api/v1/rest/messages.json
+curl -b cjar -d 'recipients[0]=90967468-f61e-11e0-98df-12313d18191a&subject=test&body=one' \http://www.allplayers.com/api/v1/rest/messages.json
 {
 	"subject":"test",
 	"body":"one",
@@ -154,7 +154,7 @@ However, sending:
 Will reply to a message in a given thread id:
 
 <pre class="terminal">
-curl -b cjar -d 'thread_id=37509&body=one two three' \http://www.allplayers.local:8080/api/v1/rest/messages.json
+curl -b cjar -d 'thread_id=37509&body=one two three' \http://www.allplayers.com/api/v1/rest/messages.json
 
 {
 	"body":"one two three",
