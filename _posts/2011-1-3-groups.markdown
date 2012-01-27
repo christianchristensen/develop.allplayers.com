@@ -55,10 +55,10 @@ $ curl https://www.allplayers.com/api/v1/rest/groups.json?search="Badminton+Devs
     /groups/{uuid} [GET]
 
 <pre class="terminal">
-$ curl https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2.json
+$ curl https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f.json
 {
   ...
-  "uri": "https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-12313d0118c2",
+  "uri": "https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f",
   "location": {
     "city": "Irving",
     ...
@@ -67,5 +67,69 @@ $ curl https://www.allplayers.com/api/v1/rest/groups/fb8544ba-f368-11e0-855a-123
   "title": "Dev pit badminton",
   "uuid": "fb8544ba-f368-11e0-855a-12313d0118c2",
   ...
+}
+</pre>
+
+## Getting Role Information
+
+<a id="/groups/{uuid}/roles/{user_uuid}"></a>
+In order to get the roles associated with a group you have to be <a href="/general.html">logged in</a> as an admin of that group.
+Optional field (in path) user_uuid which will get the roles of a certain user within a group.
+
+    /groups/{uuid}/roles/{user_uuid} [GET]
+
+<pre class="terminal">
+$ curl -b cjar
+  https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f/roles.json
+{
+  ...
+  "53b71642-14c3-11e1-8fb5-12313d04fc0f": {
+    "age_max": "0",
+    "age_min": "0",
+    "auto": "0",
+    "description": "Players are participants on a team.",
+    "fee": "0",
+    "friend": "1",
+    "friend_active": "1",
+    "full_group": "0",
+    "gender": "0",
+    "help": null,
+    "hide": "0",
+    "is_admin": "0",
+    "name": "Player",
+    "nid": "116518",
+    "og_roles": false,
+    "rid": "118798",
+    "search": "1",
+    "type": "participant",
+    "weight": "0"
+  },
+  ...
+}
+</pre>
+
+## Registering For A Group
+
+Required fields
+
+*  `role_uuid` Role UUID that you are registering for in the group.
+
+    /groups/{uuid}/register/{user_uuid}.json [GET]
+
+<pre class="terminal">
+$ curl -d "role_uuid=53b71642-14c3-11e1-8fb5-12313d04fc0f" \
+  -b cjar \
+  https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f/register/38da85f0-f5d0-11e0-b506-3213cbbf5b8c.json
+{
+  "gateway": null,
+  "nid": "116518",
+  "number": null,
+  "payment_type": null,
+  "preferred_nid": null,
+  "rid": "118798",
+  "send_method_mail": null,
+  "send_method_privatemsg": null,
+  "send_method_sms": null,
+  "uid": null
 }
 </pre>
