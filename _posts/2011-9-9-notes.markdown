@@ -12,6 +12,8 @@ published: false
 *  [cURL PHP Snippets and Example](https://gist.github.com/10c96e8621540bbc9ec4)
    *  Note:
       *  When passing array parameters in a `POST` ensure to collapse the array items using [`http_build_query`](http://php.net/manual/en/function.http-build-query.php)
+*  REST
+   *  http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming
 *  cURL
    *  http://curl.haxx.se/docs/manpage.html
    *  http://curl.haxx.se/docs/httpscripting.html
