@@ -52,10 +52,7 @@ Required fields
 *  `lastname` User last name
 *  `email` User email address
 *  `gender` User gender
-*  `birthday` User birth date
-   *  `year`
-   *  `month`
-   *  `day`
+*  `birthday` User birth date (YYYY-MM-DD)
 *  `password` User password
 
 You can also create new users by POSTing parameters
@@ -65,7 +62,7 @@ You can also create new users by POSTing parameters
 <pre class="terminal">
 $ curl -H "X-ALLPLAYERS-CAPTCHA-TOKEN: bd4586faf8a26a3bae9ef44b7049a14e" \
   -H "X-ALLPLAYERS-CAPTCHA-SOLUTION: 12" \
-  -d "firstname=FirstName&lastname=LastName&email=usertest2@example.com&gender=M&birthday[year]=1981&birthday[month]=10&birthday[day]=20&password=F@ncyP@ssw0rd" \
+  -d "firstname=FirstName&lastname=LastName&email=usertest2@example.com&gender=M&birthday=1981-03-13&password=F@ncyP@ssw0rd" \
   https://www.allplayers.com/api/v1/rest/users.json
 {
   "sizes": [
