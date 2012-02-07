@@ -51,7 +51,7 @@ Required fields
 *  `firstname` User first name
 *  `lastname` User last name
 *  `email` User email address
-*  `gender` User gender
+*  `gender` User gender (M or F)
 *  `birthday` User birth date (YYYY-MM-DD)
 *  `password` User password
 
