@@ -114,7 +114,7 @@ Required fields
 
 *  `role_uuid` Role UUID that you are registering for in the group.
 
-    /groups/{uuid}/register/{user_uuid}.json [GET]
+    /groups/{uuid}/register/{user_uuid}.json [POST]
 
 <pre class="terminal">
 $ curl -d "role_uuid=53b71642-14c3-11e1-8fb5-12313d04fc0f" \
