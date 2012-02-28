@@ -45,5 +45,5 @@ push your changes into it and create an Issue:
 Attribution
 -----------
 
-Note: Thanks to [develop.github.com](https://github.com/github/develop.github.com)
+Thanks to [develop.github.com](https://github.com/github/develop.github.com)
 
