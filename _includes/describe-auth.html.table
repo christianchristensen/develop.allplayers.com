@@ -9,12 +9,17 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp7856">https://www.allplayers.com/api/v1/rest/users</a></td>
+    "#idp301888">https://www.allplayers.com/api/v1/rest/users</a></td>
 
-    <td class="summary"><a href="#fields">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_create-id">POST</a><br />
+    <br />
+    <a href="#_apci_api_users_index-fields">GET</a><br />
     <br /></td>
 
-    <td class="summary">Search Users<br /></td>
+    <td class="summary">Create User<br />
+    <br />
+    Search Users<br /></td>
   </tr>
 
   <tr>
@@ -27,12 +32,17 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp295104">https://www.allplayers.com/api/v1/rest/users/{uuid}</a></td>
+    "#idp358576">https://www.allplayers.com/api/v1/rest/users/{uuid}</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_update-uuid">PUT</a><br />
+    <br />
+    <a href="#_apci_api_user_retrieve-uuid">GET</a><br />
     <br /></td>
 
-    <td class="summary">retrieve full user information<br /></td>
+    <td class="summary">Update User<br />
+    <br />
+    retrieve full user information<br /></td>
   </tr>
 
   <tr>
@@ -45,9 +55,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp306080">https://www.allplayers.com/api/v1/rest/users/{uuid}/groups</a></td>
+    "#idp407808">https://www.allplayers.com/api/v1/rest/users/{uuid}/groups</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_get_group_subs-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">Show groups user is a member
@@ -64,9 +75,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp312528">https://www.allplayers.com/api/v1/rest/users/{uuid}/friends</a></td>
+    "#idp414656">https://www.allplayers.com/api/v1/rest/users/{uuid}/friends</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_get_friends-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">Show friends for a given user<br /></td>
@@ -82,9 +94,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp319088">https://www.allplayers.com/api/v1/rest/users/{uuid}/groupmates</a></td>
+    "#idp421648">https://www.allplayers.com/api/v1/rest/users/{uuid}/groupmates</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_get_groupmates-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">Show groupmates for a given
@@ -101,9 +114,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp325648">https://www.allplayers.com/api/v1/rest/users/{uuid}/events</a></td>
+    "#idp428672">https://www.allplayers.com/api/v1/rest/users/{uuid}/events</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_user_get_events-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">retrieve a list of events for this
@@ -120,12 +134,17 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp344912">https://www.allplayers.com/api/v1/rest/groups</a></td>
+    "#idp439056">https://www.allplayers.com/api/v1/rest/groups</a></td>
 
-    <td class="summary"><a href="#search">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_create-id">POST</a><br />
+    <br />
+    <a href="#_apci_api_groups_index-search">GET</a><br />
     <br /></td>
 
-    <td class="summary">Search Groups<br /></td>
+    <td class="summary">Create Groups<br />
+    <br />
+    Search Groups<br /></td>
   </tr>
 
   <tr>
@@ -138,13 +157,21 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp345168">https://www.allplayers.com/api/v1/rest/groups/{uuid}</a></td>
+    "#idp439424">https://www.allplayers.com/api/v1/rest/groups/{uuid}</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_retrieve-uuid">GET</a><br />
+    <br />
+    <a href="#_apci_api_groups_update-uuid">PUT</a><br />
+    <br />
+    <a href="#_apci_api_groups_delete-uuid">DELETE</a><br />
     <br /></td>
 
-    <td class="summary">Get Group information by Group
-    ID<br /></td>
+    <td class="summary">Get Group information by Group ID<br />
+    <br />
+    Update Groups<br />
+    <br />
+    Delete a Group<br /></td>
   </tr>
 
   <tr>
@@ -157,9 +184,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp348784">https://www.allplayers.com/api/v1/rest/groups/{uuid}/albums</a></td>
+    "#idp498192">https://www.allplayers.com/api/v1/rest/groups/{uuid}/albums</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_albums_retrieve-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">retrieve a list of albums for this
@@ -176,9 +204,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp354368">https://www.allplayers.com/api/v1/rest/groups/{uuid}/events</a></td>
+    "#idp503664">https://www.allplayers.com/api/v1/rest/groups/{uuid}/events</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_events_retrieve-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">retrieve a list of events for this
@@ -195,9 +224,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp361696">https://www.allplayers.com/api/v1/rest/groups/{uuid}/members</a></td>
+    "#idp513168">https://www.allplayers.com/api/v1/rest/groups/{uuid}/members</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_members_retrieve-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">retrieve a list of members for this
@@ -214,9 +244,50 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp366880">https://www.allplayers.com/api/v1/rest/groups/photos</a></td>
+    "#idp520208">https://www.allplayers.com/api/v1/rest/groups/{uuid}/resources</a></td>
 
-    <td class="summary"><a href="#gid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_resources_retrieve-uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of resources for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp525632">https://www.allplayers.com/api/v1/rest/groups/{uuid}/subgroups</a></td>
+
+    <td class="summary"><a href=
+    "#_apci_api_groups_subgroups_retrieve-uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">retrieve a list of subgroups for this
+    group<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp534384">https://www.allplayers.com/api/v1/rest/groups/photos</a></td>
+
+    <td class="summary"><a href=
+    "#_apci_api_groups_photos_retrieve-gid">GET</a><br />
     <br /></td>
 
     <td class="summary">retrieve a list of photos for this
@@ -233,9 +304,30 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp384816">https://www.allplayers.com/api/v1/rest/albums/{uuid}</a></td>
+    "#idp540016">https://www.allplayers.com/api/v1/rest/groups/roles</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_groups_roles_retrieve-group_uuid">GET</a><br />
+    <br /></td>
+
+    <td class="summary">Retrieve the roles (uuid) belonging to a
+    group optionally targeting a specific user (uuid).<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp616144">https://www.allplayers.com/api/v1/rest/albums/{uuid}</a></td>
+
+    <td class="summary"><a href=
+    "#_albums_resource_retrieve-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">get album by uuid<br /></td>
@@ -251,9 +343,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp389344">https://www.allplayers.com/api/v1/rest/albums/{uuid}/photos</a></td>
+    "#idp620560">https://www.allplayers.com/api/v1/rest/albums/{uuid}/photos</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_albums_resource_photos-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">get album photos by uuid<br /></td>
@@ -269,9 +362,10 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp396512">https://www.allplayers.com/api/v1/rest/photos/{uuid}</a></td>
+    "#idp627744">https://www.allplayers.com/api/v1/rest/photos/{uuid}</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_photos_resource_retrieve-uuid">GET</a><br />
     <br /></td>
 
     <td class="summary">Get photo by uuid<br /></td>
@@ -287,11 +381,12 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp400352">https://www.allplayers.com/api/v1/rest/messages</a></td>
+    "#idp631600">https://www.allplayers.com/api/v1/rest/messages</a></td>
 
-    <td class="summary"><a href="#box">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_messages_index-box">GET</a><br />
     <br />
-    <a href="#id">POST</a><br />
+    <a href="#_apci_api_messages_create-id">POST</a><br />
     <br /></td>
 
     <td class="summary">Messages Index<br />
@@ -310,13 +405,14 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp400720">https://www.allplayers.com/api/v1/rest/messages/{id}</a></td>
+    "#idp631968">https://www.allplayers.com/api/v1/rest/messages/{id}</a></td>
 
-    <td class="summary"><a href="#id">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_messages_retrieve-id">GET</a><br />
     <br />
-    <a href="#id">PUT</a><br />
+    <a href="#_apci_api_messages_update-id">PUT</a><br />
     <br />
-    <a href="#id">DELETE</a><br />
+    <a href="#_apci_api_messages_delete-id">DELETE</a><br />
     <br /></td>
 
     <td class="summary">Retrieve a single message or thread<br />
@@ -336,12 +432,13 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp455520">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
+    "#idp686528">https://www.allplayers.com/api/v1/rest/events</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_events_create-id">POST</a><br />
     <br /></td>
 
-    <td class="summary">Retrieve Event by uuid<br /></td>
+    <td class="summary">Create a new event<br /></td>
   </tr>
 
   <tr>
@@ -354,13 +451,63 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp458864">https://www.allplayers.com/api/v1/rest/resources/{uuid}</a></td>
+    "#idp686896">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
 
-    <td class="summary"><a href="#uuid">GET</a><br />
+    <td class="summary"><a href=
+    "#_apci_api_events_retrieve-uuid">GET</a><br />
+    <br />
+    <a href="#_apci_api_events_update-uuid">PUT</a><br />
+    <br />
+    <a href="#_apci_api_events_delete-uuid">DELETE</a><br />
     <br /></td>
 
-    <td class="summary">Retrieve Resource by Resource
-    UUID<br /></td>
+    <td class="summary">Retrieve Event by uuid<br />
+    <br />
+    Update an event thats been created<br />
+    <br />
+    Delete an event<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp797792">https://www.allplayers.com/api/v1/rest/resources</a></td>
+
+    <td class="summary"><a href=
+    "#_apci_api_resources_create-id">POST</a><br />
+    <br /></td>
+
+    <td class="summary">Create a new Resource<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp798160">https://www.allplayers.com/api/v1/rest/resources/{uuid}</a></td>
+
+    <td class="summary"><a href=
+    "#_apci_api_resources_retrieve-uuid">GET</a><br />
+    <br />
+    <a href="#_apci_api_resources_delete-uuid">DELETE</a><br />
+    <br /></td>
+
+    <td class="summary">Retrieve Resource by Resource UUID<br />
+    <br />
+    Delete a Resource<br /></td>
   </tr>
 
   <tr>
