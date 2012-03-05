@@ -28,25 +28,6 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp345792">https://www.allplayers.com/api/v1/rest/users/{uuid}</a></td>
-
-    <td class="summary"><a href=
-    "#_apci_api_user_update-uuid">PUT</a><br />
-    <br /></td>
-
-    <td class="summary">Update User<br /></td>
-  </tr>
-
-  <tr>
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-  </tr>
-
-  <tr>
-    <td class="summary"><a href=
     "#idp390608">https://www.allplayers.com/api/v1/rest/groups</a></td>
 
     <td class="summary"><a href=
@@ -263,59 +244,13 @@
 
   <tr>
     <td class="summary"><a href=
-    "#idp467152">https://www.allplayers.com/api/v1/rest/events</a></td>
-
-    <td class="summary"><a href=
-    "#_apci_api_events_create-id">POST</a><br />
-    <br /></td>
-
-    <td class="summary">Create a new event<br /></td>
-  </tr>
-
-  <tr>
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-  </tr>
-
-  <tr>
-    <td class="summary"><a href=
     "#idp467520">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
 
     <td class="summary"><a href=
     "#_apci_api_events_retrieve-uuid">GET</a><br />
-    <br />
-    <a href="#_apci_api_events_update-uuid">PUT</a><br />
-    <br />
-    <a href="#_apci_api_events_delete-uuid">DELETE</a><br />
     <br /></td>
 
-    <td class="summary">Retrieve Event by uuid<br />
-    <br />
-    Update an event thats been created<br />
-    <br />
-    Delete an event<br /></td>
-  </tr>
-
-  <tr>
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-
-    <td class="summarySeparator"></td>
-  </tr>
-
-  <tr>
-    <td class="summary"><a href=
-    "#idp578448">https://www.allplayers.com/api/v1/rest/resources</a></td>
-
-    <td class="summary"><a href=
-    "#_apci_api_resources_create-id">POST</a><br />
-    <br /></td>
-
-    <td class="summary">Create a new Resource<br /></td>
+    <td class="summary">Retrieve Event by uuid<br /></td>
   </tr>
 
   <tr>
@@ -332,13 +267,9 @@
 
     <td class="summary"><a href=
     "#_apci_api_resources_retrieve-uuid">GET</a><br />
-    <br />
-    <a href="#_apci_api_resources_delete-uuid">DELETE</a><br />
     <br /></td>
 
-    <td class="summary">Retrieve Resource by Resource UUID<br />
-    <br />
-    Delete a Resource<br /></td>
+    <td class="summary">Retrieve Resource by Resource UUID<br /></td>
   </tr>
 
   <tr>
