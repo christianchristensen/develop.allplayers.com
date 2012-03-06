@@ -79,6 +79,7 @@ Required fields:
 *  `title`
 *  `description`
 *  `location`
+   *  `zip`
 *  `category`
 
 Optional fields:
