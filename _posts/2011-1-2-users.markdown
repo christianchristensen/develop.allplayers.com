@@ -46,6 +46,9 @@ $ curl -b cjar https://www.allplayers.com/api/v1/rest/users/38da85f0-f5d0-11e0-b
 }
 </pre>
 
+
+## Creating a new user
+
 Required fields
 
 *  `firstname` User first name
@@ -53,7 +56,6 @@ Required fields
 *  `email` User email address
 *  `gender` User gender (M or F)
 *  `birthday` User birth date (YYYY-MM-DD)
-*  `password` User password
 
 You can also create new users by POSTing parameters
 
@@ -62,7 +64,7 @@ You can also create new users by POSTing parameters
 <pre class="terminal">
 $ curl -H "X-ALLPLAYERS-CAPTCHA-TOKEN: bd4586faf8a26a3bae9ef44b7049a14e" \
   -H "X-ALLPLAYERS-CAPTCHA-SOLUTION: 12" \
-  -d "firstname=FirstName&lastname=LastName&email=usertest2@example.com&gender=M&birthday=1981-03-13&password=F@ncyP@ssw0rd" \
+  -d "firstname=FirstName&lastname=LastName&email=usertest2@example.com&gender=M&birthday=1981-03-13" \
   https://www.allplayers.com/api/v1/rest/users.json
 {
   "sizes": [
