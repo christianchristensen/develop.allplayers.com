@@ -70,6 +70,66 @@ $ curl https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-123
 }
 </pre>
 
+
+## Creating a new group
+
+<a id="/groups"></a>
+Required fields:
+
+*  `title`
+*  `description`
+*  `location`
+*  `category`
+
+Optional fields:
+
+*  `group_type`
+*  `web_address`
+*  `active`
+*  `groupmates_enabled`
+*  `groups_above`
+*  `external_id`
+
+Specify either create `POST` or update `PUT`:
+
+    /groups [POST/PUT]
+
+<pre class="terminal">
+$ curl -b cjar
+  https://www.allplayers.com/api/v1/rest/groups.json
+  -d"title=Group Name&description=Group Description&location[street]=600 E. Las Colinas&location[city]=Irving&location[state]=TX&location[zip]=75039&category[0]=Sports&external_id=BEEF1024"
+{
+  "activity_level": "4",
+  "uri": "https://www.allplayers.com/api/v1/rest/groups/90a9d7aa-6726-11e1-870e-8dd170be67c9",
+  "location": {
+    "city": "Irving",
+    "latitude": "32.860945",
+    "zip": "75039",
+    "country": "us",
+    "street": "600 E. Las Colinas",
+    "longitude": "-96.931069",
+    "state": "TX"
+  },
+  "author": {
+    "uuid": "fabb6c50-e91b-11e0-abff-080027706aa2"
+  },
+  "list_in_directory": "0",
+  "title": "Group Name",
+  "uuid": "90a9d7aa-6726-11e1-870e-8dd170be67c9",
+  "external_id": "BEEF1024",
+  "url": "https://www.allplayers.com/g/group_name-75039",
+  "secondary_color": "000000",
+  "node_status": "1",
+  "primary_color": "000000",
+  "description": "Group Description",
+  "group_mates_enabled": "No",
+  "groups_above_uuid": [
+
+  ],
+  "active": "Inactive"
+}
+</pre>
+
 ## Getting Role Information
 
 <a id="/groups/{uuid}/roles/{user_uuid}"></a>
@@ -110,11 +170,9 @@ $ curl -b cjar
 
 ## Registering For A Group
 
-Required fields
+Required field: `role_uuid` Role UUID that you are registering for in the group.
 
-*  `role_uuid` Role UUID that you are registering for in the group.
-
-    /groups/{uuid}/register/{user_uuid}.json [POST]
+    /groups/{group_uuid}/register/{user_uuid} [POST]
 
 <pre class="terminal">
 $ curl -d "role_uuid=53b71642-14c3-11e1-8fb5-12313d04fc0f" \
