@@ -20,7 +20,7 @@ A Web Application Description ([WADL](http://www.w3.org/Submission/wadl/)) for [
 
 ## Authentication ##
 
-You can use HTTP Basic Auth to authenticate as a AllPlayers.com user. Note that all requests that need authentication should include the Authentication header.  Unauthenticated requests will return 404 to prevent any sort of private information leakage.
+You can use HTTP Basic Auth `curl -u "email:password"` to authenticate as a AllPlayers.com user. Note that all requests that need authentication should include the Authentication header.  Unauthenticated requests will return 404 to prevent any sort of private information leakage.
 
 
     /users/login [POST]
