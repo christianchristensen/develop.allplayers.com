@@ -74,23 +74,20 @@ $ curl https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-123
 ## Creating a new group
 
 <a id="/groups"></a>
-Required fields:
+**Input**
 
-*  `title`
-*  `description`
-*  `location`
-   *  `zip`
-*  `category`
-
-Optional fields:
-
-*  `group_type`
+*  `title`\*
+*  `description`\*
+*  `location`\* [info](fields.html#/location)
+*  `category`\* [info](fields.html#category-group)
+*  `group_type` [info](fields.html#/group-type)
 *  `web_address`
 *  `active`
 *  `groupmates_enabled`
 *  `groups_above`
 *  `external_id`
 
+\* Fields marked with an asterisk are required
 Specify either create `POST` or update `PUT`:
 
     /groups [POST/PUT]

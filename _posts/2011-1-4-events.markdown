@@ -9,7 +9,7 @@ API for accessing and modifying events.
 
 ## Getting Event Information
 
-You can get the group information by listing all groups or by specific search terms
+You can get the full information for an event by calling its specific URI
 
 <a id="/events/{uuid}"></a>
 
@@ -18,28 +18,158 @@ You can get the group information by listing all groups or by specific search te
 <pre class="terminal">
 $ curl https://www.allplayers.com/api/v1/rest/events/5df711be-f611-11e0-a44b-12313d04fc0f
 {
-...
-  "category": "",
-  "title": "Halloween!!",
-  "uuid": "5df711be-f611-11e0-a44b-12313d04fc0f",
-  "competitors": {
-    "": {
-      "label": null,
-      "event_outcome": null,
-      "score": null
+  "uuid":"9f08d9d6-6c85-11e1-bce3-48f1e08d240c",
+  "description":"",
+  "title":"afadsfasf",
+  "groups":[
+    "aea342ac-69ef-11e1-b865-300db1507b7a"
+    ],
+  "published":true,
+  "external_id":"",
+  "date_time":{
+    "0":{
+      "start":"2012-03-30T19:54:00",
+      "end":"2012-03-30T20:54:00"
+    },
+    "1":{
+      "start":"2012-03-31T19:54:00",
+      "end":"2012-03-31T20:54:00"
+    },
+    "2":{
+      "start":"2012-04-01T19:54:00",
+      "end":"2012-04-01T20:54:00"
+    },
+    "3":{
+      "start":"2012-04-02T19:54:00",
+      "end":"2012-04-02T20:54:00"
+    },
+    "4":{
+      "start":"2012-04-03T19:54:00",
+      "end":"2012-04-03T20:54:00"
+    },
+    "5":{
+      "start":"2012-04-05T19:54:00",
+      "end":"2012-04-05T20:54:00"
+    },
+    "6":{
+      "start":"2012-04-05T19:54:00",
+      "end":"2012-04-05T20:54:00"
+    },
+    "repeat_info":{
+      "freq":"DAILY",
+      "interval":"1",
+      "until":"2012-04-05T00:00:00",
+      "exdate":[
+        "2012-04-04T00:00:00"
+      ],
+      "rdate":[
+        "2012-04-30T05:00:00"
+      ]
     }
   },
-  "description": "",
-  "resource_ids": [
-
+  "category":"meeting",
+  "competitors":[
   ],
-  "date_time": [
-    {
-      "date_end_timestamp": 1320123540,
-      "date_start": "2011-10-31T17:00:00 -05:00",
-      "date_end": "2011-10-31T23:59:00 -05:00",
-      "date_start_timestamp": 1320098400
-    }
+  "resource_ids":[
   ]
 }
 </pre>
+
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
+
+## Creating Events
+
+Let's take a look at how to create an event
+
+<a id="/events"></a>
+**Input**  
+
+*  `title`\*
+*  `description`\*  
+*  `groups`\* 
+*  `date_time`\* [info](fields.html#/date_time)
+*  `category` [info](fields.html#/category)
+*  `resources`
+*  `competitors` [info](fields.html#/competitors)
+*  `published`
+*  `external_id`
+
+\* Fields specified with an asterisk are required.  
+
+    /events [POST / PUT]
+
+<pre class="terminal">
+curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"groups[0]=aea342ac-69ef-11e1-b865-300db1507b7a&title=TestEvent&description=test1&category=game&competitors[c9690224-eead-11e0-abff-080027706aa2]label]=BlueJays&competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][label]=RedJays&resources[0]=b19g47se-b0f67f02-6179-11e1-9932-b37b4e17875f&date_time[start]=2012-09-15T11%3A00%3A00&date_time[end]=2012-09-15T12%3A00%3A00&date_time[repeat][interval]=1&date_time[repeat][freq]=daily&date_time[repeat][until]=2012-10-15&date_time[repeat][exdate][]=2012-09-17&date_time[repeat][rdate][]=2012-10-17&date_time[repeat][bymonth][9]=9&date_time[repeat][bymonth][10]=10&date_time[repeat][bymonthday][12]=12&date_time[repeat][bymonthday][15]=15&date_time[repeat][bymonthday][17]=17&date_time[repeat][byday][SU]=SU&date_time[repeat][byday][MO]=MO"
+{
+  "uuid":"15852492-84c4-11e1-a209-da9f8ce3ca4d",
+  "description":"test1",
+  "title":"BlueJays @ RedJays",
+    "groups":[
+      "c9690224-eead-11e0-abff-080027706aa2",
+      "b0f67f02-6179-11e1-9932-b37b4e17875f",
+      "aea342ac-69ef-11e1-b865-300db1507b7a"
+    ],
+  "published":true,
+  "external_id":"",
+  "date_time":{
+    "0":{
+      "start":"2012-09-15T11:00:00",
+      "end":"2012-09-15T12:00:00"
+    },
+    "1":{
+      "start":"2012-10-17T00:00:00",
+      "end":"2012-10-17T01:00:00"
+    },
+    "repeat_info":{
+      "freq":"DAILY",
+      "interval":"1",
+      "bymonth":[
+        "9",
+        "10"
+      ],
+      "bymonthday":[
+        "12",
+        "15",
+        "17"
+      ],
+      "byday":[
+        "SU",
+        "MO"
+      ],
+      "until":"2012-10-15T00:00:00",
+      "exdate":[
+        "2012-09-17T00:00:00"
+      ],
+      "rdate":[
+        "2012-10-17T00:00:00"
+      ]
+    }
+  },
+  "category":"game",
+  "competitors":[
+    {
+      "uuid":"c9690224-eead-11e0-abff-080027706aa2",
+      "label":"tes1",
+      "score":null,
+      "event_outcome":null
+    },
+    {
+      "uuid":"b0f67f02-6179-11e1-9932-b37b4e17875f",
+      "label":"tes2",
+      "score":null,
+      "event_outcome":null
+    }
+  ],
+  "resource_ids":[
+    "b19g47se-b0f67f02-6179-11e1-9932-b37b4e17875f"
+  ]
+}
+</pre>
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
+
+The parameters for updating events are very similar, with the caveat that none of them are longer required.  
+The PUT request to event works with only the data you pass in, and the rest is left alone.  There are however a few caveats to keep in mind:
+
+*  If you are changing an event category that has competitors (game, scrimmage), to one that doesn't, keep in mind that since the title is automatically generated, you will need to pass that in in order to change it.  The competitors will automatically be removed.  
+
+*  The date_time parameter is rebuilt as a whole.  So for example if you just want to modify the until key in the date_time parameter, you will have to pass the whole thing in.

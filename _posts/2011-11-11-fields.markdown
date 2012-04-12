@@ -1,0 +1,112 @@
+---
+layout: default
+title: Field Definitions
+---
+
+####This page describes some of the more complex input data you can send. If you don't see a field you're looking for described here, please visit the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml)
+
+<a id="field-info-availability"></a>
+###availability (resource)
+A numerically keyed array of [date_time](/fields.html#/date_time) arrays to specify when this resource is available for usage.
+
+<a id="/category-event"></a>
+###category (event)
+Optional string specifying category of the event.  
+Possible values:
+
+*  `game` \*
+*  `meeting`
+*  `party`
+*  `practice`
+*  `scrimmage` \*
+*  `other`
+
+*\* Categories marked with an asterisk can have competitors.  Other ones may not.*
+
+<a id="/category-group"></a>
+###category (group)
+Optional string specifying category of the event.  
+There are a multidude of possible values.  Please login to [AllPlayers](https://www.allplayers.com) and go to [Create a group](https://www.allplayers.com/node/add/group).  Look in the Group Category field to see all available values.
+
+
+<a id="/competitors"></a>
+###competitors
+A numerically keyed array of competitor arrays containing the following:
+
+*  `uuid` - competitor uuid \*
+*  `label` - competitor label
+*  `score` - competitor score
+
+*\* Fields with an asterisk are required.*  
+Example:  
+
+`competitors[c9690224-eead-11e0-abff-080027706aa2][label] = 'Red';`  
+`competitors[c9690224-eead-11e0-abff-080027706aa2][score] = 32;`
+`competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][label] = 'White';`  
+`competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][score] = 10;`  
+
+<a id="/date_time"></a>
+###date_time  
+An array of date and time information always passed in and out in UTC time zone.  
+
+***start***  
+`start` is a string specifying when the event starts in UTC time zone. An example: `2012-03-30T19:54:00`.
+
+***end***  
+`end` is a string specifying when the event ends in UTC time zone. An example: `2012-03-30T21:54:00`.
+
+***freq***  
+`freq` specifies how often the event will occur.  If `freq` is specified, `interval` and `until` are required.
+Possible values:  
+
+*  `DAILY`  
+*  `MONTHLY`  
+*  `WEEKLY`  
+*  `YEARLY`  
+
+***interval***  
+`interval` is an integer that specifies how many times the `freq` must repeat until the next event instance occurs.  For example if you have `freq = 1` and `interval = 1`, the event is going to occur every day.  Change it to `"interval":"2"` and the event will occur every two days.  And so on. If `interval` is specified, `freq` and `until` are required.
+
+***until***  
+The until parameter terminates the repetition.  The event will be generated according to the rules until no more instances can be created that will fit in before the `until` parameter's date. An example would be `until = 2012-04-05T00:00:00`. If `until` is specified, `freq` and `interval` are required.
+
+***exdate***  
+The `exdate` parameter is an array that lets you specify a date that would normally be active under the rule you have defined, but you don't want it included.  For example if you have practices daily, but you want you team to spend Labor Day relaxing, specifying an `exdate` allows that kind of flexibility. Note that the `exdate`parameter is an array, so you are not limited to passing only one. An example `exdate` array value is `2012-04-04T00:00:00`
+
+***rdate***  
+The `rdate` parameter is an array that lets you specify an additional date that is a single instance and does not fit into the repeate rule that is defined.  For example if you have practices that repeat once a week, but the week before the championships you want to practice an extra day.  Specifying an `rdate` parameter allows that kind of flexibility. Note that the `rdate` parameter is an array, so you are not limited to passing only one. An example `rdate` array value is `2012-04-30T05:00:00`
+
+***bymonth***  
+`bymonth` parameter is an array that lets you specify which months the event should occur in.  For example, if you have a yearly repeating event that only occurs in March, April, and May, this parameter is your friend.  It's also important to note that the keys and the values in this array must match. In addition, the month numbers are specified with no leading zeroes. An example would be `bymonth[9] = 9`.  
+
+***bymonthday***  
+`bymonthday` parameter is an array that lets you specify which days of the month this event will occur in.  Extending the yearly repeating event occuring in March, April and May example, let's say that this event occurs only on the 1st and 12th of the month.  You can specify this with the `bymonthday` parameter. An example would be `bymonthday[15] = 15`.
+
+***byday***  
+`byday` parameter is an array that allows allows you even more granularity by specifying that this event will only occur on certain days of the week within the rule. If you want the event to repeat every Sunday of the month within the rule, you can pass in `byday['SU'] = 'SU'` or by specifying `+1SU` will make the event occur only on the first Sunday of the month.  (`+2SU` makes it occur every second Sunday, and so on)  
+
+
+<a id="/group-type"></a>
+###group-type
+A string representing a type of a group, so that we can set up your group in a way best suited.
+Possible values:
+
+*  `association`
+*  `league`
+*  `division`
+*  `team`
+*  `class`
+*  `club`
+*  `other`
+
+<a id="/location"></a>
+###location
+An array containing location information.  Only `zip` key is required.  
+Available keys:  
+
+*  `city`
+*  `state`
+*  `street`
+*  `zip`
+*  `country`
+
