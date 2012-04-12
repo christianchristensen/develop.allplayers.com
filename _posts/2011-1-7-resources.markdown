@@ -75,7 +75,7 @@ $ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/resources/c412c73e-8
 
 </pre>
 
-Please examine the various [field defitions](fields.html) for further description of the data returned.
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.
 
 ## Creating Resources
 
@@ -86,9 +86,9 @@ Let's take a look at how to create a resource
 
 *  `title`\*
 *  `location`\* [info](fields.html#/location)
-*  `groups`\*  [info](fields.html#/groups)
+*  `groups`\*
 *  `availability` [info](fields.html#/availability)
-*  `external_id` [info](fields.html#/external_id)
+*  `external_id`
 
 \* Fields specified with an asterisk are required.  
 
@@ -124,7 +124,7 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/resources.json -d"grou
   "uri":"http://www.allplayers.local:8080/api/v1/rest/resources/7787e8b2-84d5-11e1-a209-da9f8ce3ca4d"
 }
 </pre>
-Please examine the various [field information](fields.html#field-info) for further description of the data returned.  
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned. 
 
 The parameters for updating resources are very similar, with the caveat that none of them are longer required.  
 The PUT request to event works with only the data you pass in, and the rest is left alone.  There are however a few caveats to keep in mind:

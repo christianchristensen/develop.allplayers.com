@@ -3,11 +3,13 @@ layout: default
 title: Field Definitions
 ---
 
+####This page describes some of the more complex input data you can send. If you don't see a field you're looking for described here, please visit the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml)
+
 <a id="field-info-availability"></a>
 ###availability (resource)
 A numerically keyed array of [date_time](/fields.html#/date_time) arrays to specify when this resource is available for usage.
 
-<a id="/category"></a>
+<a id="/category-event"></a>
 ###category (event)
 Optional string specifying category of the event.  
 Possible values:
@@ -20,6 +22,12 @@ Possible values:
 *  `other`
 
 *\* Categories marked with an asterisk can have competitors.  Other ones may not.*
+
+<a id="/category-group"></a>
+###category (group)
+Optional string specifying category of the event.  
+There are a multidude of possible values.  Please login to [AllPlayers](https://www.allplayers.com) and go to [Create a group](https://www.allplayers.com/node/add/group).  Look in the Group Category field to see all available values.
+
 
 <a id="/competitors"></a>
 ###competitors
@@ -77,13 +85,19 @@ The `rdate` parameter is an array that lets you specify an additional date that 
 ***byday***  
 `byday` parameter is an array that allows allows you even more granularity by specifying that this event will only occur on certain days of the week within the rule. If you want the event to repeat every Sunday of the month within the rule, you can pass in `byday['SU'] = 'SU'` or by specifying `+1SU` will make the event occur only on the first Sunday of the month.  (`+2SU` makes it occur every second Sunday, and so on)  
 
-<a id="/external_id"></a>
-####external_id
-A string with a max-length of 72 characters specifying an external identity's id for this object.
 
-<a id="/groups"></a>
-###groups
-An array of group uuids
+<a id="/group-type"></a>
+###group-type
+A string representing a type of a group, so that we can set up your group in a way best suited.
+Possible values:
+
+*  `association`
+*  `league`
+*  `division`
+*  `team`
+*  `class`
+*  `club`
+*  `other`
 
 <a id="/location"></a>
 ###location
@@ -96,10 +110,3 @@ Available keys:
 *  `zip`
 *  `country`
 
-<a id="/published"></a>
-####published
-An integer (0 / 1) whether the event should be published.
-
-<a id="/resources"></a>
-####resources (event)
-A numerically keyed array of resource uuids.  

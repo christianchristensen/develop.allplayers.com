@@ -75,7 +75,7 @@ $ curl https://www.allplayers.com/api/v1/rest/events/5df711be-f611-11e0-a44b-123
 }
 </pre>
 
-Please examine the various [field information](events.html#field-info) for further description of the data returned.
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
 
 ## Creating Events
 
@@ -86,13 +86,13 @@ Let's take a look at how to create an event
 
 *  `title`\*
 *  `description`\*  
-*  `groups`\*  [info](fields.html#/groups)
+*  `groups`\* 
 *  `date_time`\* [info](fields.html#/date_time)
 *  `category` [info](fields.html#/category)
-*  `resources` [info](fields.html#/resources)
+*  `resources`
 *  `competitors` [info](fields.html#/competitors)
-*  `published` [info](fields.html#/published)
-*  `external_id` [info](fields.html#/external_id)
+*  `published`
+*  `external_id`
 
 \* Fields specified with an asterisk are required.  
 
@@ -165,7 +165,7 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"curl -b
   ]
 }
 </pre>
-Please examine the various [field information](events.html#field-info) for further description of the data returned.  
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
 
 The parameters for updating events are very similar, with the caveat that none of them are longer required.  
 The PUT request to event works with only the data you pass in, and the rest is left alone.  There are however a few caveats to keep in mind:
