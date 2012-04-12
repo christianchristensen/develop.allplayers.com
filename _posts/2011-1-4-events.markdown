@@ -86,13 +86,13 @@ Let's take a look at how to create an event
 
 *  `title`\*
 *  `description`\*  
-*  `groups`\*  [info](events.html#field-info-groups)
-*  `date_time`\* [info](events.html#field-info-date_time)
-*  `category` [info](events.html#field-info-category)
-*  `resources` [info](events.html#field-info-resources)
-*  `competitors` [info](events.html#field-info-competitors)
-*  `published` [info](events.html#field-info-published)
-*  `external_id` [info](events.html#field-info-external_id)
+*  `groups`\*  [info](fields.html#/groups)
+*  `date_time`\* [info](fields.html#/date_time)
+*  `category` [info](fields.html#/category)
+*  `resources` [info](fields.html#/resources)
+*  `competitors` [info](fields.html#/competitors)
+*  `published` [info](fields.html#/published)
+*  `external_id` [info](fields.html#/external_id)
 
 \* Fields specified with an asterisk are required.  
 
@@ -172,92 +172,4 @@ The PUT request to event works with only the data you pass in, and the rest is l
 
 *  If you are changing an event category that has competitors (game, scrimmage), to one that doesn't, keep in mind that since the title is automatically generated, you will need to pass that in in order to change it.  The competitors will automatically be removed.  
 
-*  The datetime parameter is rebuilt as a whole.  So for example if you just want to modify the until key in the date_time parameter, you will have to pass the whole thing in.
-
-
-<a id="field-info"></a>
-<a id="field-info-groups"></a>
-###groups
-An array of group uuids
-<a id="field-info-date_time"></a>
-###date_time  
-An array of date and time information always passed in and out in UTC time zone.  
-
-***start***  
-`start` is a string specifying when the event starts in UTC time zone. An example: `2012-03-30T19:54:00`.
-
-***end***  
-`end` is a string specifying when the event ends in UTC time zone. An example: `2012-03-30T21:54:00`.
-
-***freq***  
-`freq` specifies how often the event will occur.  If `freq` is specified, `interval` and `until` are required.
-Possible values:  
-
-*  `DAILY`  
-*  `MONTHLY`  
-*  `WEEKLY`  
-*  `YEARLY`  
-
-***interval***  
-`interval` is an integer that specifies how many times the `freq` must repeat until the next event instance occurs.  For example if you have `freq = 1` and `interval = 1`, the event is going to occur every day.  Change it to `"interval":"2"` and the event will occur every two days.  And so on. If `interval` is specified, `freq` and `until` are required.
-
-***until***  
-The until parameter terminates the repetition.  The event will be generated according to the rules until no more instances can be created that will fit in before the `until` parameter's date. An example would be `until = 2012-04-05T00:00:00`. If `until` is specified, `freq` and `interval` are required.
-
-***exdate***  
-The `exdate` parameter is an array that lets you specify a date that would normally be active under the rule you have defined, but you don't want it included.  For example if you have practices daily, but you want you team to spend Labor Day relaxing, specifying an `exdate` allows that kind of flexibility. Note that the `exdate`parameter is an array, so you are not limited to passing only one. An example `exdate` array value is `2012-04-04T00:00:00`
-
-***rdate***  
-The `rdate` parameter is an array that lets you specify an additional date that is a single instance and does not fit into the repeate rule that is defined.  For example if you have practices that repeat once a week, but the week before the championships you want to practice an extra day.  Specifying an `rdate` parameter allows that kind of flexibility. Note that the `rdate` parameter is an array, so you are not limited to passing only one. An example `rdate` array value is `2012-04-30T05:00:00`
-
-***bymonth***  
-`bymonth` parameter is an array that lets you specify which months the event should occur in.  For example, if you have a yearly repeating event that only occurs in March, April, and May, this parameter is your friend.  It's also important to note that the keys and the values in this array must match. In addition, the month numbers are specified with no leading zeroes. An example would be `bymonth[9] = 9`.  
-
-***bymonthday***  
-`bymonthday` parameter is an array that lets you specify which days of the month this event will occur in.  Extending the yearly repeating event occuring in March, April and May example, let's say that this event occurs only on the 1st and 12th of the month.  You can specify this with the `bymonthday` parameter. An example would be `bymonthday[15] = 15`.
-
-***byday***  
-`byday` parameter is an array that allows allows you even more granularity by specifying that this event will only occur on certain days of the week within the rule. If you want the event to repeat every Sunday of the month within the rule, you can pass in `byday['SU'] = 'SU'` or by specifying `+1SU` will make the event occur only on the first Sunday of the month.  (`+2SU` makes it occur every second Sunday, and so on)  
-<a id="field-info-category"></a>
-###category
-Optional string specifying category of the event.  
-Possible values:
-
-*  `game` \*
-*  `meeting`
-*  `party`
-*  `practice`
-*  `scrimmage` \*
-*  `other`
-
-*\* Categories marked with an asterisk can have competitors.  Other ones may not.*
-
-
-<a id="field-info-resources"></a>
-####resources
-A numerically keyed array of resource uuids.  
-
-<a id="field-info-competitors"></a>
-####competitors  
-A numerically keyed array of competitor arrays containing the following:
-
-*  `uuid` - competitor uuid \*
-*  `label` - competitor label
-*  `score` - competitor score
-
-*\* Fields with an asterisk are required.*  
-Example:  
-
-`competitors[c9690224-eead-11e0-abff-080027706aa2][label] = 'Red';`  
-`competitors[c9690224-eead-11e0-abff-080027706aa2][score] = 32;`
-`competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][label] = 'White';`  
-`competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][score] = 10;`  
-
-
-<a id="field-info-published"></a>
-####published
-An integer (0 / 1) whether the event should be published.
-
-<a id="field-info-external_id"></a>
-####external_id
-A string with a max-length of 72 characters specifying an external identity's id for this object.
+*  The date_time parameter is rebuilt as a whole.  So for example if you just want to modify the until key in the date_time parameter, you will have to pass the whole thing in.
