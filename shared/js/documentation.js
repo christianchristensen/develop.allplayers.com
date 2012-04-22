@@ -87,9 +87,11 @@ $(function() {
   // Since the api list is auto-gened - auto link to mapped help pages
   var url_doc_map = new Object;
   $('.sidebar-module ul li').each(function(index, value){
-  	var url = $('a' , value).attr('href');
-  	var title = url.replace('.html', '');
-    url_doc_map[title] = url;
+    var url = $('a' , value).attr('href');
+    if (url != undefined) {
+      var title = url.replace('.html', '');
+      url_doc_map[title] = url;
+    }
   });
   $("#public_wadl td:nth-child(1) a").each(function(index){
     var possibleURLObject = $(this);
