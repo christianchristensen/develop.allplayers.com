@@ -1,0 +1,27 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/"><img src="images/logo-full-brohead-bw-40.png"/></a>
+      <ul class="nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            {% for post in site.posts reversed %}
+              {% if page.title == post.title %}
+              <li class="active"><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% else %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="console.html">API Console</a></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li><a href="/">API v1</a></li>
+        <li><a href="http://support.allplayers.com">Support</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="header-bump"></div>
