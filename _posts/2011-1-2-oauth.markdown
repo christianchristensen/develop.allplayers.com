@@ -1,0 +1,64 @@
+---
+layout: default
+title: OAuth
+---
+
+# OAuth
+
+OAuth is a protocol that lets external apps request authorization to private details in a user's AllPlayers.com account without getting their password.  This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.
+
+All developers need to register their application (https://www.allplayers.com/user/{uid}/oauth/consumer/add) before getting started. A registered OAuth application is assigned a unique Client ID and Client Secret.  The Client Secret should not be shared.
+
+## Web Application Flow
+
+This is a description of the OAuth flow from 3rd party web sites.
+
+1. Request a temporary token with your client key to begin the OAuth "dance"
+
+        GET https://www.allplayers.com/oauth/request_token?
+          oauth_version=1.0&
+          oauth_nonce=...&
+          oauth_timestamp=...&
+          oauth_consumer_key=...&
+          oauth_signature_method=HMAC-SHA1&
+          oauth_signature=...
+
+        RESPONSE:
+          oauth_token=...&oauth_token_secret=...
+
+2. Redirect users to a this link to request AllPlayers.com access.
+
+        https://www.allplayers.com/oauth/authorize?
+          oauth_token=...&
+          oauth_callback=http://www.example.com/oauth_redirect
+
+3. If the user accepts your request, AllPlayers.com redirects back to your site with a temporary code in a code parameter. Exchange this for an access token:
+
+        GET https://www.allplayers.com/oauth/access_token?
+          oauth_version=1.0&
+          oauth_nonce=...&
+          oauth_timestamp=...&
+          oauth_consumer_key=...&
+          oauth_token=...&
+          oauth_signature_method=HMAC-SHA1&
+          oauth_signature=...
+
+        RESPONSE:
+          oauth_token=...&oauth_token_secret=...
+
+4. You have the access token, so now you can make requests on the user's behalf:
+
+        GET https://www.allplayers.com/api/v1/rest/users/current.json?
+          oauth_version=1.0&
+          oauth_nonce=...&
+          oauth_timestamp=...&
+          oauth_consumer_key=&
+          oauth_token=...&
+          oauth_signature_method=HMAC-SHA1&
+          oauth_signature=...
+
+## References
+
+* [OAuth.net](http://oauth.net/)
+* [RFC 5849: The OAuth 1.0 Protocol](http://tools.ietf.org/html/rfc5849)
+

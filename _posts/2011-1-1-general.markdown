@@ -20,6 +20,9 @@ A Web Application Description ([WADL](http://www.w3.org/Submission/wadl/)) for [
 
 ## Authentication ##
 
+**Note** [OAuth](./oauth.html) is the preferred authentication method because tokens can be limited to specific types of data, and can be revoked by users at any time.
+
+
 You can use HTTP Basic Auth `curl -u "email:password"` to authenticate as a AllPlayers.com user. Note that all requests that need authentication should include the Authentication header.  Unauthenticated requests will return 404 to prevent any sort of private information leakage.
 
 
