@@ -27,6 +27,13 @@
   color: #ddd;
 }
 
+code {
+  color: #52595D;
+}
+
+.alert code {
+  background-color: #FBEED5;
+}
 /*
  * TODO: fix responsive menu collapse
  */
