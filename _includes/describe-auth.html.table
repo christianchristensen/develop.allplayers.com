@@ -517,4 +517,23 @@
 
     <td class="summarySeparator"></td>
   </tr>
+
+  <tr>
+    <td class="summary"><a href=
+    "#idp797794">https://www.allplayers.com/api/v1/rest/notifier</a></td>
+
+    <td class="summary"><a href=
+    "#_apci_api_notifier_create-id">POST</a><br />
+    <br /></td>
+
+    <td class="summary">Create a new Notifier<br /></td>
+  </tr>
+
+  <tr>
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+
+    <td class="summarySeparator"></td>
+  </tr>
 </table>
