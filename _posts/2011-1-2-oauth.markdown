@@ -7,7 +7,7 @@ title: OAuth
 
 OAuth is a protocol that lets external apps request authorization to private details in a user's AllPlayers.com account without getting their password.  This is preferred over Basic Authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.
 
-All developers need to register their application (https://www.allplayers.com/user/{uid}/oauth/consumer/add) before getting started. A registered OAuth application is assigned a unique Client ID and Client Secret.  The Client Secret should not be shared.
+All developers need to [register their application (https://www.allplayers.com/oauth/apps/add)](https://www.allplayers.com/oauth/apps/add) before getting started. A registered OAuth application is assigned a unique Client ID and Client Secret.  The Client Secret should not be shared.
 
 ## Web Application Flow
 
