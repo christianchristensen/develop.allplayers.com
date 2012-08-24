@@ -1,0 +1,10 @@
+---
+layout: default
+title: Forms
+---
+
+# Forms API
+
+API for accessing and modifying web-forms related to groups and users.
+
+## Getting web-form information
