@@ -1,22 +1,26 @@
-<div class="sidebar-shell">
+<div class="span4">
   <div class="sidebar-module">
+    <h4>Welcome, developers!</h4>
+    <p style="font-weight: bold;">The AllPlayers.com API is currently in <span class="beta">beta</span>.</p>
+    <p>Looking for more information? Find it here:</p>
     <ul>
+      <li>Check the <a href="https://github.com/AllPlayers/develop.allplayers.com/wiki/Frequently-Asked-Questions">API FAQ</a></li>
+      <li>Join us on <a href="http://freenode.net/faq.shtml">freenode</a>: <code><a href="http://webchat.freenode.net/?channels=allplayers&amp;randomnick=1&amp;prompt=1" target="_blank">#allplayers</a></code></li>
+      <li><a href="https://github.com/AllPlayers/develop.allplayers.com/issues">Search for or create an issue</a>.</li>
+      <li>Email us at <a href="mailto:api@allplayers.com">api@allplayers.com</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-module sidebar-nav">
+    <ul class="nav-list">
       {% for post in site.posts reversed %}
       <li>
-        {% if page.title == post.title %}
-        <h3 class="disable"><span>{{ page.title }}</span></h3>
-        {% else %}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        {% endif %}
-        <span class="spacer"></span>
+        <i class="icon-chevron-right"></i>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
       {% endfor %}
     </ul>
   </div> <!-- /sidebar-module -->
   <div class="sidebar-module">
-    <p>Having trouble or looking for additional information? Please check the API <a href="https://github.com/AllPlayers/develop.allplayers.com/wiki/Frequently-Asked-Questions">FAQ</a>, join us on <a href="http://freenode.net/faq.shtml">freenode</a>: <code><a href="http://webchat.freenode.net/?channels=allplayers&randomnick=1&prompt=1" target="_blank">#allplayers</a></code>, or <a href="https://github.com/AllPlayers/develop.allplayers.com/issues">search for or create an issue</a>.</p>
-  </div>
-  <div class="sidebar-module">
     <p>This website is <a href="http://github.com/AllPlayers/develop.allplayers.com" target="_blank">open source</a>. Please help us by forking the project and adding to it.</p>
   </div>
-</div><!-- /sidebar-shell -->
+</div>

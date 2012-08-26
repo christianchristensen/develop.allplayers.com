@@ -3,12 +3,15 @@
 <html>
 {% include head-tag.snippet %}
 <body>
-  {% include navbar.snippet %} 
-  <div id="wrapper">
-    <div class="content">
-      {{ content }}
+  {% include navbar.snippet %}
+  <div class="container">
+    <div class="row"><br /></div>
+    <div class="row">
+      <div class="span12">
+        {{ content }}
+      </div>
     </div>
-  </div><!-- #wrapper -->
+  </div>
   {% include footer.snippet %}
 </body>
 </html>
