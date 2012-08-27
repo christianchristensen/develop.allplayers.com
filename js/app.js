@@ -8,6 +8,9 @@ $(function() {
     event.preventDefault();
   });
 
+  // Hide the "summarySeparator" extraneous table info.
+  $('.summarySeparator').hide();
+
   // Since the api list is auto-gened - auto link to mapped help pages
   var url_doc_map = new Object;
   $('.sidebar-module ul li').each(function(index, value){
