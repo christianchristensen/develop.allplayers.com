@@ -34,6 +34,13 @@ Once you've done that, run `rake` to compile the site:
 This should start a web server at <http://localhost:3000> which is now
 serving your site, updating whenever you make changes.
 
+## JS, CSS, and front-end dependencies
+
+Managed via [Bower](http://twitter.github.com/bower/)
+
+`bower list` (etc...)
+
+
 Contributing
 ------------
 

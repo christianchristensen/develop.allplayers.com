@@ -1,0 +1,23 @@
+{
+  "name": "allplayers-theme",
+  "version": "0.0.0",
+  "main": [
+    "./js/bootstrap.min.js",
+    "./css/bootstrap.min.css",
+    "./css/bootstrap-responsive.min.css",
+    "./img/glyphicons-halflings.png",
+    "./img/glyphicons-halflings-white.png"
+  ],
+  "dependencies": {
+    "jquery": "~1.8.0"
+  },
+  "readme": "## AllPlayers.com Theme(s)\n\nHere you will find CSS and image assets that are suitable for themeing \"external\" AllPlayers.com (AP) related sites. Specifically: note the bootstrap overrides in order to build a consistent look and feel conforming to AP styles.\n\n### Dev notes\n\nFor base versions in this repo we're relying on CDN hosting for easier vendor support:\n\n*  http://www.bootstrapcdn.com (Twitter Bootsrap with icons)\n*  https://developers.google.com/speed/libraries/devguide#jquery (jQuery)\n\n",
+  "readmeFilename": "README.md",
+  "_id": "allplayers-theme@0.0.1",
+  "description": "Here you will find CSS and image assets that are suitable for themeing \"external\" AllPlayers.com (AP) related sites. Specifically: note the bootstrap overrides in order to build a consistent look and feel conforming to AP styles.",
+  "commit": "71a350c5b49a91b4d74de959f39ede7ecf509dd1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AllPlayers/allplayers-theme.git"
+  }
+}
