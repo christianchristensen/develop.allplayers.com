@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<!-- Note: Originally pulled from http://develop.allplayers.com/ on 08/22/2012 -->
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Develop AllPlayers.com - Home</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="develop_front.js" type="text/javascript"></script>
+
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css">
+  <!-- <link href="bootstrap-responsive.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="../css/apci-bootstrap.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/"><img src="../assets/allplayerscom_logo.png"/></a>
+        <ul class="nav">
+          <li><a href="/">API v1</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="general.html">General API Information</a></li>
+              <li><a href="oauth.html">OAuth</a></li>
+              <li><a href="users.html">Users</a></li>
+              <li><a href="groups.html">Groups</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="messages.html">Messages</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="fields.html">Field Definitions</a></li>
+              <li><a href="console.html">API Console</a></li>
+              <li><a href="notifier.html">Notifier</a></li>
+            </ul>
+          </li>
+          <li><a href="console.html">API Console</a></li>
+          <li class="last"><a href="http://support.allplayers.com">Support</a></li>
+        </ul>
+      </div><!-- end container -->
+    </div><!-- end navbar-inner -->
+  </div><!-- end navbor -->
+
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="alert alert-block">
+          <h4 class="alert-heading">Notice</h4> Currently the AllPlayers.com API is in beta; for more information feel free to ask questions in (freenode) <code><a href="http://webchat.freenode.net/?channels=allplayers&randomnick=1&prompt=1" target="_blank">#allplayers</a></code> or email us: <a href="mailto:api@allplayers.com">api@allplayers.com</a>.
+        </div>
+      </div><!-- end span12 -->
+    </div><!-- end row -->     
+
+    <div class="row">
+      <div class="span8">
+        <div id="welcome">
+          <h1>Welcome to the AllPlayers.com Developer site</h1>
+          <p>This site contains API documentation for the publicly available components of the AllPlayers.com site.</p>
+        </div>
+        <div id="public_wadl">
+          <!-- Begin: XSLT Processed WADL Info -->
+          <h2>Non-authorized API</h2>
+          <table class="table">
+            <tr>
+              <th>Resource</th>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp301888">https://www.allplayers.com/api/v1/rest/users</a></td>
+              <td class="summary"><a href="#_apci_api_user_create-id">POST</a><br /><br /></td>
+              <td class="summary">Create User<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp390608">https://www.allplayers.com/api/v1/rest/groups</a></td>
+              <td class="summary"><a href="#_apci_api_groups_index-search">GET</a><br /><br /></td>
+              <td class="summary">Search Groups<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp390976">https://www.allplayers.com/api/v1/rest/groups/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_groups_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Get Group information by Group ID<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp395056">https://www.allplayers.com/api/v1/rest/groups/{uuid}/albums</a></td>
+              <td class="summary"><a href="#_apci_api_groups_albums_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of albums for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp400720">https://www.allplayers.com/api/v1/rest/groups/{uuid}/events</a></td>
+              <td class="summary"><a href="#_apci_api_groups_events_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of events for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp410256">https://www.allplayers.com/api/v1/rest/groups/{uuid}/members</a></td>
+              <td class="summary"><a href="#_apci_api_groups_members_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of members for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp417296">https://www.allplayers.com/api/v1/rest/groups/{uuid}/resources</a></td>
+              <td class="summary"><a href="#_apci_api_groups_resources_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of resources for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp422720">https://www.allplayers.com/api/v1/rest/groups/{uuid}/subgroups</a></td>
+              <td class="summary"><a href="#_apci_api_groups_subgroups_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of subgroups for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp431472">https://www.allplayers.com/api/v1/rest/groups/photos</a></td>
+              <td class="summary"><a href="#_apci_api_groups_photos_retrieve-gid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of photos for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp450592">https://www.allplayers.com/api/v1/rest/albums/{uuid}</a></td>
+              <td class="summary"><a href="#_albums_resource_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">get album by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp455008">https://www.allplayers.com/api/v1/rest/albums/{uuid}/photos</a></td>
+              <td class="summary"><a href="#_albums_resource_photos-uuid">GET</a><br /><br /></td>
+              <td class="summary">get album photos by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp462192">https://www.allplayers.com/api/v1/rest/photos/{uuid}</a></td>
+              <td class="summary"><a href="#_photos_resource_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Get photo by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp467520">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_events_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Retrieve Event by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp578816">https://www.allplayers.com/api/v1/rest/resources/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_resources_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Retrieve Resource by Resource UUID<br /></td>
+            </tr>
+          </table>
+
+          <h2>Authorized API</h2>
+          <table class="table">
+            <tr>
+              <th>Resource</th>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp301888">https://www.allplayers.com/api/v1/rest/users</a></td>
+              <td class="summary"><a href="#_apci_api_user_create-id">POST</a><br /><br /><a href="#_apci_api_users_index-fields">GET</a><br /><br /></td>
+              <td class="summary">Create User<br /><br />Search Users<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp358576">https://www.allplayers.com/api/v1/rest/users/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_user_update-uuid">PUT</a><br /><br /><a href="#_apci_api_user_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Update User<br /><br />retrieve full user information<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp407808">https://www.allplayers.com/api/v1/rest/users/{uuid}/groups</a></td>
+              <td class="summary"><a href="#_apci_api_user_get_group_subs-uuid">GET</a><br /><br /></td>
+              <td class="summary">Show groups user is a member of.<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp414656">https://www.allplayers.com/api/v1/rest/users/{uuid}/friends</a></td>
+              <td class="summary"><a href="#_apci_api_user_get_friends-uuid">GET</a><br /><br /></td>
+              <td class="summary">Show friends for a given user<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp421648">https://www.allplayers.com/api/v1/rest/users/{uuid}/groupmates</a></td>
+              <td class="summary"><a href="#_apci_api_user_get_groupmates-uuid">GET</a><br /><br /></td>
+              <td class="summary">Show groupmates for a given user<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp428672">https://www.allplayers.com/api/v1/rest/users/{uuid}/events</a></td>
+              <td class="summary"><a href="#_apci_api_user_get_events-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of events for this user<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp439056">https://www.allplayers.com/api/v1/rest/groups</a></td>
+              <td class="summary"><a href="#_apci_api_groups_create-id">POST</a><br /><br /><a href="#_apci_api_groups_index-search">GET</a><br /><br /></td>
+              <td class="summary">Create Groups<br /><br />Search Groups<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp439424">https://www.allplayers.com/api/v1/rest/groups/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_groups_retrieve-uuid">GET</a><br /><br /><a href="#_apci_api_groups_update-uuid">PUT</a><br /><br /><a href="#_apci_api_groups_delete-uuid">DELETE</a><br /><br /></td>
+              <td class="summary">Get Group information by Group ID<br /><br />Update Groups<br /><br />Delete a Group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp498192">https://www.allplayers.com/api/v1/rest/groups/{uuid}/albums</a></td>
+              <td class="summary"><a href="#_apci_api_groups_albums_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of albums for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp503664">https://www.allplayers.com/api/v1/rest/groups/{uuid}/events</a></td>
+              <td class="summary"><a href="#_apci_api_groups_events_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of events for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp513168">https://www.allplayers.com/api/v1/rest/groups/{uuid}/members</a></td>
+              <td class="summary"><a href="#_apci_api_groups_members_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of members for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp520208">https://www.allplayers.com/api/v1/rest/groups/{uuid}/resources</a></td>
+              <td class="summary"><a href="#_apci_api_groups_resources_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of resources for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp525632">https://www.allplayers.com/api/v1/rest/groups/{uuid}/subgroups</a></td>
+              <td class="summary"><a href="#_apci_api_groups_subgroups_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of subgroups for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp534384">https://www.allplayers.com/api/v1/rest/groups/photos</a></td>
+              <td class="summary"><a href="#_apci_api_groups_photos_retrieve-gid">GET</a><br /><br /></td>
+              <td class="summary">retrieve a list of photos for this group<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp540016">https://www.allplayers.com/api/v1/rest/groups/roles</a></td>
+              <td class="summary"><a href="#_apci_api_groups_roles_retrieve-group_uuid">GET</a><br /><br /></td>
+              <td class="summary">Retrieve the roles (uuid) belonging to a group optionally targeting a specific user (uuid).<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp616144">https://www.allplayers.com/api/v1/rest/albums/{uuid}</a></td>
+              <td class="summary"><a href="#_albums_resource_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">get album by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp620560">https://www.allplayers.com/api/v1/rest/albums/{uuid}/photos</a></td>
+              <td class="summary"><a href="#_albums_resource_photos-uuid">GET</a><br /><br /></td>
+              <td class="summary">get album photos by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp627744">https://www.allplayers.com/api/v1/rest/photos/{uuid}</a></td>
+              <td class="summary"><a href="#_photos_resource_retrieve-uuid">GET</a><br /><br /></td>
+              <td class="summary">Get photo by uuid<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp631600">https://www.allplayers.com/api/v1/rest/messages</a></td>
+              <td class="summary"><a href="#_apci_api_messages_index-box">GET</a><br /><br /><a href="#_apci_api_messages_create-id">POST</a><br /><br /></td>
+              <td class="summary">Messages Index<br /><br />POST: Send A New Message, Create New Thread or Reply To A thread<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp631968">https://www.allplayers.com/api/v1/rest/messages/{id}</a></td>
+              <td class="summary"><a href="#_apci_api_messages_retrieve-id">GET</a><br /><br /><a href="#_apci_api_messages_update-id">PUT</a><br /><br /><a href="#_apci_api_messages_delete-id">DELETE</a><br /><br /></td>
+              <td class="summary">Retrieve a single message or thread<br /><br />PUT: Update a messages status<br /><br />Delete: delete something, will find out what<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp686528">https://www.allplayers.com/api/v1/rest/events</a></td>
+              <td class="summary"><a href="#_apci_api_events_create-id">POST</a><br /><br /></td>
+              <td class="summary">Create a new event<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp686896">https://www.allplayers.com/api/v1/rest/events/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_events_retrieve-uuid">GET</a><br /><br /><a href="#_apci_api_events_update-uuid">PUT</a><br /><br /><a href="#_apci_api_events_delete-uuid">DELETE</a><br /><br /></td>
+              <td class="summary">Retrieve Event by uuid<br /><br />Update an event thats been created<br /><br />Delete an event<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp797792">https://www.allplayers.com/api/v1/rest/resources</a></td>
+              <td class="summary"><a href="#_apci_api_resources_create-id">POST</a><br /><br /></td>
+              <td class="summary">Create a new Resource<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp798160">https://www.allplayers.com/api/v1/rest/resources/{uuid}</a></td>
+              <td class="summary"><a href="#_apci_api_resources_retrieve-uuid">GET</a><br /><br /><a href="#_apci_api_resources_delete-uuid">DELETE</a><br /><br /></td>
+              <td class="summary">Retrieve Resource by Resource UUID<br /><br />Delete a Resource<br /></td>
+            </tr>
+            <tr>
+              <td class="summary"><a href="#idp797794">https://www.allplayers.com/api/v1/rest/notifier</a></td>
+              <td class="summary"><a href="#_apci_api_notifier_create-id">POST</a><br /><br /></td>
+              <td class="summary">Create a new Notifier<br /></td>
+            </tr>
+          </table>
+        <!-- End: XSLT Processed WADL Info -->
+        <br />
+        <b><a id="togglePublicAPIDescription" href="#">Toggle Description</a></b>
+      </div> <!-- end public_wadl -->
+    </div><!-- end span8 -->    
+
+    <div class="span4">
+      <div class="sidebar-module">
+          <h4>Welcome, developers!</h4>
+          <p style="font-weight: bold;">The AllPlayers.com API is currently in <span class="beta">beta</span>.</p>
+          <p>Looking for more information? Find it here:
+            <ul>
+              <li>Check the <a href="https://github.com/AllPlayers/develop.allplayers.com/wiki/Frequently-Asked-Questions">API FAQ</a></li>
+              <li>Join us on <a href="http://freenode.net/faq.shtml">freenode</a>: <code><a href="http://webchat.freenode.net/?channels=allplayers&randomnick=1&prompt=1" target="_blank">#allplayers</a></code></li>
+              <li><a href="https://github.com/AllPlayers/develop.allplayers.com/issues">Search for or create an issue</a>.</li>
+              <li>Email us at <a href="mailto:api@allplayers.com">api@allplayers.com</a></li>
+      </div><!-- end sidebar-module -->
+      <div class="sidebar-module sidebar-nav">
+        <ul class="nav-list">
+          <li><i class="icon-chevron-right"></i><a href="general.html">General API Information</a></li>
+          <li><i class="icon-chevron-right"></i><a href="oauth.html">OAuth</a></li>
+          <li><i class="icon-chevron-right"></i><a href="users.html">Users</a></li>
+          <li><i class="icon-chevron-right"></i><a href="groups.html">Groups</a></li>
+          <li><i class="icon-chevron-right"></i><a href="events.html">Events</a></li>
+          <li><i class="icon-chevron-right"></i><a href="messages.html">Messages</a></li>
+          <li><i class="icon-chevron-right"></i><a href="resources.html">Resources</a></li>
+          <li><i class="icon-chevron-right"></i><a href="fields.html">Field Definitions</a></li>
+          <li><i class="icon-chevron-right"></i><a href="console.html">API Console</a></li>
+          <li><i class="icon-chevron-right"></i><a href="notifier.html">Notifier</a></li>
+        </ul>
+      </div><!-- end sidebar-module -->
+      <div class="sidebar-module">
+        <p>This website is <a href="http://github.com/AllPlayers/develop.allplayers.com" target="_blank">open source</a>. Please help us by forking the project and adding to it.</p>
+      </div><!-- end sidebar-module -->
+    </div><!-- end span4 -->
+  </div><!-- end container -->
+
+<!--**************
+   FOOTER
+**************-->
+  <div id="footer" >
+  </div><!-- /#footer -->
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9812072-3']);
+    _gaq.push(['_setDomainName', 'allplayers.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+    })();
+  </script>
+
+</body>
+</html>
+

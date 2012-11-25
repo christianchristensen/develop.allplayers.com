@@ -1,0 +1,195 @@
+/*------------------------------------------------------------------------------
+     Header Styles
+------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------
+     Bootstrap override styles
+------------------------------------------------------------------------------*/
+body {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+a {
+  color: #aba01a;
+}
+
+a:hover, a:active {
+  color: #958e2d;
+}
+
+h1 {
+  border-bottom: 1px dashed #cccccc;
+  color: #9b243e;
+  font-family: 'PT Sans Narrow',Arial,Helvetica,sans-serif;
+  font-size: 1.9em;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+  padding-top: .3em;
+}
+
+h2 {
+  color: #2c7892;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-top: 20px;
+}
+
+h4 {
+  color: #666666;
+  font-size: .9em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.navbar-inner {
+  background-color: #126D89;
+  background-image: -moz-linear-gradient(top, #2c7892, #1a4958);
+  background-image: -ms-linear-gradient(top,#2c7892, #1a4958);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2c7892), to(#1a4958));
+  background-image: -webkit-linear-gradient(top, #2c7892, #1a4958);
+  background-image: -o-linear-gradient(top, #2c7892, #1a4958);
+  background-image: linear-gradient(top, #2c7892, #1a4958);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #666;
+  min-height: 30px;
+  height: 30px;
+  -moz-box-shadow: 0px 2px 3px #000000 !important;
+  -webkit-box-shadow: 0px 2px 3px #000000 !important;
+  box-shadow: 0px 2px 3px #000000 !important;
+}
+
+.navbar .nav {
+  margin: 0;
+}
+
+.navbar .brand {
+  padding: 0px 20px 0px 20px;
+}
+
+.navbar .nav > li {
+  text-shadow: 1px 1px #000; 
+  font-size: 13px;
+  font-weight: bold; 
+  height: 30px;
+  margin: 0;
+}
+
+.navbar .nav.pull-right > li {
+  border-left: 2px groove #126D89; 
+}
+
+.navbar .nav > li.last {
+  border-right: 2px groove #126D89; 
+}
+
+.navbar .nav > li > a {
+  color: #ffffff;
+  padding: 7px 0 0 0;
+  text-shadow: none;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.navbar .nav.pull-right > li > a {
+  padding: 7px 15px 0 20px;
+  text-shadow: 1px 1px 0 black;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+
+.navbar .nav > li > a:hover {
+  color: #ffffff;
+}
+
+.navbar .nav li.dropdown {
+  background-color: none;
+}
+
+code {
+  color: #52595D;
+}
+
+.alert-block {
+  margin-top: 50px;
+}
+
+.alert code {
+  background-color: #FBEED5;
+}
+
+.table th {
+  color: #666666;
+}
+
+.icon-chevron-right {
+  margin-left: 20px;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+
+/*------------------------------------------------------------------------------
+     Custom styles
+------------------------------------------------------------------------------*/
+
+
+.sidebar-module {
+  border: 5px solid #EFEDEA;
+  color: #555555;
+  font-size: .9em;
+  line-height: 1.2em;
+  margin-top: 30px;
+  padding: 10px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+}
+
+.sidebar-nav {
+  padding: 0;
+}
+
+.sidebar-nav ul.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav ul.nav-list li {
+  border-bottom: 1px solid #EFEDEA;
+  line-height: 40px;
+  margin-left: -30px;
+}
+
+.sidebar-nav ul.nav-list li:last-child {
+  border-bottom: 0;
+}
+
+.sidebar-nav ul.nav-list li a {
+  color: #2c7892;
+  font-size: 1em !important;
+  font-weight: normal;
+  padding-left: 30px;
+}
+
+.beta {
+  color: #f89406;
+}
+
+/*
+ * TODO: fix responsive menu collapse
+ */
