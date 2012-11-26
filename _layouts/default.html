@@ -5,17 +5,14 @@
 <body>
   {% include navbar.snippet %}
   <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div class="alert alert-block"><h4 class="alert-heading">Notice</h4> Currently the AllPlayers.com API is in beta; for more information feel free to ask questions in (freenode) <code><a href="http://webchat.freenode.net/?channels=allplayers&randomnick=1&prompt=1" target="_blank">#allplayers</a></code> or email us: <a href="mailto:api@allplayers.com">api@allplayers.com</a>.</div>
+    <section>
+      <div class="row">
+        <div class="span8">
+          {{ content }}
+        </div>
+        {% include sidebar.snippet %}
       </div>
-    </div>
-    <div class="row">
-      <div class="span8">
-        {{ content }}
-      </div>
-      {% include sidebar.snippet %}
-    </div>
+    </section>
   </div>
   {% include footer.snippet %}
 </body>

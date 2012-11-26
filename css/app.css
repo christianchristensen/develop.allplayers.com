@@ -1,0 +1,10 @@
+section {
+  padding-top: 30px;
+}
+
+.icon-chevron-right {
+  margin-left: 20px;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "develop.allplayers.com",
+  "version": "0.0.0",
+  "main": ["./css/app.css", "./js/app.js"],
+  "dependencies": {
+    "allplayers-theme": "latest"
+  }
+}
