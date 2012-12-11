@@ -27,7 +27,7 @@ between the child iframe and the parent.
 1. Get your iframe to resize dynamically based on content.
 
 We use porthole for the app to be able to communicate cross-domain, so just include it or download it into your app:
-    <script src="https://raw.github.com/ternarylabs/porthole/master/src/porthole.min.js" type="text/javascript" />
+    <script src="https://d15emhs8isqw9l.cloudfront.net/sites/all/libraries/porthole/src/porthole.min.js" type="text/javascript" />
 
 Then include the following script:
 
