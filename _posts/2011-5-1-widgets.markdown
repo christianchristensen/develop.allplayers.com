@@ -2,7 +2,8 @@
 layout: default
 title: Widgets
 ---
-
+<script src="https://d15emhs8isqw9l.cloudfront.net/sites/all/libraries/porthole/src/porthole.min.js" type="text/javascript"></script>
+<script src="js/iframe.js" type="text/javascript"></script>
 # Widgets
 
 ## Group Registration
@@ -14,9 +15,9 @@ can register for a new account.
 
 **Example**
 
-<img src="/images/group_registration_1.png" style="border:1px solid gray" />
+<iframe id="group_register" name="group_register" seamless="seamless" style="border: none; overflow-y: hidden;" src="https://m.allplayers.com/g/api/register#group_register" width="100%" height="0px"></iframe>
 
-    < iframe id="group_register" name="group_register" seamless="seamless" style="border: none; overflow-y: hidden;" src="https://m.allplayers.com/g/store_group/register#group_register" width="100%" height="0px"></iframe>
+    < iframe id="group_register" name="group_register" seamless="seamless" style="border: none; overflow-y: hidden;" src="https://m.allplayers.com/g/api/register#group_register" width="100%" height="0px"></iframe>
 
 **Get your app to display widget seamlessly**
 
@@ -27,7 +28,7 @@ between the child iframe and the parent.
 1. Get your iframe to resize dynamically based on content.
 
 We use porthole for the app to be able to communicate cross-domain, so just include it or download it into your app:
-    <script src="https://d15emhs8isqw9l.cloudfront.net/sites/all/libraries/porthole/src/porthole.min.js" type="text/javascript" />
+    <script src="https://d15emhs8isqw9l.cloudfront.net/sites/all/libraries/porthole/src/porthole.min.js" type="text/javascript"></script>
 
 Then include the following script:
 
