@@ -1,6 +1,6 @@
 $(function() {
   function onMessage(messageEvent) {
-    var height = messageEvent.data.height + 'px';
+    var height = (messageEvent.data.height+30) + 'px';
     console.log(height);
     // Once height message is received from QS, slide open the iframe
     $('#group_register').animate({
