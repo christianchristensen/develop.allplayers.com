@@ -18,7 +18,7 @@ can register for a new account.
 <iframe id="group_register" name="group_register" seamless="seamless" style="border: dashed; overflow-y: hidden;" src="https://m.allplayers.com/g/api/register#group_register" width="100%" height="0px"></iframe>
 <br />
 
-    < iframe id="group_register" name="group_register" seamless="seamless" style="border: none; overflow-y: hidden;" src="https://m.allplayers.com/g/api/register#group_register" width="100%" height="0px"></iframe>
+    <iframe id="group_register" name="group_register" seamless="seamless" style="border: none; overflow-y: hidden;" src="https://m.allplayers.com/g/api/register#group_register" width="100%" height="0px"></iframe>
 
 **Get your app to display widget seamlessly**
 
