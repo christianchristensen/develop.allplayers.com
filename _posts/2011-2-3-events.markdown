@@ -75,18 +75,18 @@ $ curl https://www.allplayers.com/api/v1/rest/events/5df711be-f611-11e0-a44b-123
 }
 </pre>
 
-Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.
 
 ## Creating Events
 
 Let's take a look at how to create an event
 
 <a id="/events"></a>
-**Input**  
+**Input**
 
 *  `title`\*
-*  `description`\*  
-*  `groups`\* 
+*  `description`\*
+*  `groups`\*
 *  `date_time`\* [info](fields.html#/date_time)
 *  `category` [info](fields.html#/category)
 *  `resources`
@@ -94,12 +94,37 @@ Let's take a look at how to create an event
 *  `published`
 *  `external_id`
 
-\* Fields specified with an asterisk are required.  
+\* Fields specified with an asterisk are required.
 
     /events [POST / PUT]
 
+### Simple Event
+
 <pre class="terminal">
-curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"groups[0]=aea342ac-69ef-11e1-b865-300db1507b7a&title=TestEvent&description=test1&category=game&competitors[c9690224-eead-11e0-abff-080027706aa2]label]=BlueJays&competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][label]=RedJays&resources[0]=b19g47se-b0f67f02-6179-11e1-9932-b37b4e17875f&date_time[start]=2012-09-15T11%3A00%3A00&date_time[end]=2012-09-15T12%3A00%3A00&date_time[repeat][interval]=1&date_time[repeat][freq]=daily&date_time[repeat][until]=2012-10-15&date_time[repeat][exdate][]=2012-09-17&date_time[repeat][rdate][]=2012-10-17&date_time[repeat][bymonth][9]=9&date_time[repeat][bymonth][10]=10&date_time[repeat][bymonthday][12]=12&date_time[repeat][bymonthday][15]=15&date_time[repeat][bymonthday][17]=17&date_time[repeat][byday][SU]=SU&date_time[repeat][byday][MO]=MO"
+curl -b cjar -d "groups[0]=28c77344-aacf-11e1-808c-12313d2a2278&title=Halloween&description=Spooky - All Hallows Eve&date_time[start]=2013-10-31T00%3A00%3A00&date_time[end]=2013-10-31T23%3A59%3A59" https://www.allplayers.com/api/v1/rest/events.json
+{
+  "uuid": "cc841247-59b1-11e2-8b62-1231393ad338",
+  "description": "Spooky - All Hallows Eve",
+  "title": "Halloween",
+  "groups": [
+    "28c77344-aacf-11e1-808c-12313d2a2278"
+  ],
+  "published": 1,
+  "external_id": "",
+  "date_time": [
+    {
+      "start": "2013-10-31T00:00:00",
+      "end": "2013-10-31T23:59:00"
+    }
+  ],
+  "category": ""
+}
+</pre>
+
+### Complex Event
+
+<pre class="terminal">
+curl -b cjar https://www.allplayers.com/api/v1/rest/events.json -d"groups[0]=aea342ac-69ef-11e1-b865-300db1507b7a&title=TestEvent&description=test1&category=game&competitors[c9690224-eead-11e0-abff-080027706aa2][label]=BlueJays&competitors[b0f67f02-6179-11e1-9932-b37b4e17875f][label]=RedJays&resources[0]=b19g47se-b0f67f02-6179-11e1-9932-b37b4e17875f&date_time[start]=2012-09-15T11%3A00%3A00&date_time[end]=2012-09-15T12%3A00%3A00&date_time[repeat][interval]=1&date_time[repeat][freq]=daily&date_time[repeat][until]=2012-10-15&date_time[repeat][exdate][]=2012-09-17&date_time[repeat][rdate][]=2012-10-17&date_time[repeat][bymonth][9]=9&date_time[repeat][bymonth][10]=10&date_time[repeat][bymonthday][12]=12&date_time[repeat][bymonthday][15]=15&date_time[repeat][bymonthday][17]=17&date_time[repeat][byday][SU]=SU&date_time[repeat][byday][MO]=MO"
 {
   "uuid":"15852492-84c4-11e1-a209-da9f8ce3ca4d",
   "description":"test1",
@@ -165,11 +190,11 @@ curl -b cjar http://www.allplayers.local:8080/api/v1/rest/events.json -d"curl -b
   ]
 }
 </pre>
-Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.  
+Please examine the various [field defitions](fields.html) and the [AllPlayers WADL Documentation](https://www.allplayers.com/api/v1/rest/wadl/describe.xml) for further description of the data returned.
 
-The parameters for updating events are very similar, with the caveat that none of them are longer required.  
+The parameters for updating events are very similar, with the caveat that none of them are longer required.
 The PUT request to event works with only the data you pass in, and the rest is left alone.  There are however a few caveats to keep in mind:
 
-*  If you are changing an event category that has competitors (game, scrimmage), to one that doesn't, keep in mind that since the title is automatically generated, you will need to pass that in in order to change it.  The competitors will automatically be removed.  
+*  If you are changing an event category that has competitors (game, scrimmage), to one that doesn't, keep in mind that since the title is automatically generated, you will need to pass that in in order to change it.  The competitors will automatically be removed.
 
 *  The date_time parameter is rebuilt as a whole.  So for example if you just want to modify the until key in the date_time parameter, you will have to pass the whole thing in.
