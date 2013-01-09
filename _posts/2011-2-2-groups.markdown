@@ -7,6 +7,10 @@ title: Groups
 
 API for accessing and modifying groups.
 
+*  [Group](#group)
+*  [Group Role Info](#roles)
+*  [Joining a user to a group](#join)
+
 ## Getting Group Information
 
 You can get the group information by listing all groups or by specific search terms
@@ -128,6 +132,8 @@ $ curl -b cjar
 }
 </pre>
 
+<br />
+<a name="roles"></a>
 ## Getting Role Information
 
 <a id="/groups/{uuid}/roles/{user_uuid}"></a>
@@ -166,26 +172,24 @@ $ curl -b cjar
 }
 </pre>
 
-## Registering For A Group
+<br />
+<a name="join"></a>
+## Joining a user to a group
 
-Required field: `role_uuid` Role UUID that you are registering for in the group.
+Inputs:
 
-    /groups/{group_uuid}/register/{user_uuid} [POST]
+*  `org_webform_id`
+*  `role_name`
+*  `role_options`
+
+Joining a user to a group requires that the authenticated user be an admin on the group they are joining the user to.
+Note: The joined user will recieve a notification "You have been added to Group Name on allplayers.com".
+
+    /groups/{group_uuid}/join/{user_uuid} [POST]
 
 <pre class="terminal">
-$ curl -d "role_uuid=53b71642-14c3-11e1-8fb5-12313d04fc0f" \
-  -b cjar \
-  https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f/register/38da85f0-f5d0-11e0-b506-3213cbbf5b8c.json
+$ curl -X POST -b cjar https://www.allplayers.com/api/v1/rest/groups/52d1c068-f611-11e0-a44b-12313d04fc0f/join/38da85f0-f5d0-11e0-b506-3213cbbf5b8c.json
 {
-  "gateway": null,
-  "nid": "116518",
-  "number": null,
-  "payment_type": null,
-  "preferred_nid": null,
-  "rid": "118798",
-  "send_method_mail": null,
-  "send_method_privatemsg": null,
-  "send_method_sms": null,
-  "uid": null
+  "type": "subscribed"
 }
 </pre>
