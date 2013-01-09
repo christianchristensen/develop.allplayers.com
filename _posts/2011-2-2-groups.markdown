@@ -8,6 +8,8 @@ title: Groups
 API for accessing and modifying groups.
 
 *  [Group](#group)
+*  [Copy](#copy)
+   *  [Copy Members](#copymembers)
 *  [Group Role Info](#roles)
 *  [Joining a user to a group](#join)
 
@@ -132,6 +134,45 @@ $ curl -b cjar
 }
 </pre>
 
+<a id="copy"></a>
+<br />
+## Copy Group Information
+
+Input:
+
+*  `options` (array)
+   *  dashboard
+   *  boxes
+   *  group_roles
+   *  registration_settings
+*  `title` (Bool)
+*  `description` (Bool)
+*  `location` (Bool)
+*  `category` (Bool)
+*  `active` (Bool)
+*  `groupmates_enabled` (Bool)
+*  `groups_above` (Bool)
+*  `group_logo` (Bool)
+*  `group_colors` (Bool)
+*  `forms` (array)
+*  `roles` (array)
+
+Copying group information allows you to copy settings from one group (for example: a template group) to another such that the web address, uuid, and other identifying information are preserved while items like the dashboard, look and feel, and registration settings are able to be re-used.
+
+    /groups/{uuid}/copy/{source_uuid} [POST]
+
+<a id="copymembers"></a>
+### Copy Members
+
+Input:
+
+*  `roles`
+
+Copying group members enqueues a background task that will copy all membership from one group to another.
+
+    /groups/{uuid}/copymembers/{source_uuid} [POST]
+
+<a id="roles"></a>
 <br />
 <a name="roles"></a>
 ## Getting Role Information
