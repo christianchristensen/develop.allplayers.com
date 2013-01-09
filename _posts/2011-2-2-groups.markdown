@@ -174,7 +174,6 @@ Copying group members enqueues a background task that will copy all membership f
 
 <a id="roles"></a>
 <br />
-<a name="roles"></a>
 ## Getting Role Information
 
 <a id="/groups/{uuid}/roles/{user_uuid}"></a>
@@ -213,8 +212,8 @@ $ curl -b cjar
 }
 </pre>
 
+<a id="join"></a>
 <br />
-<a name="join"></a>
 ## Joining a user to a group
 
 Inputs:
