@@ -1,0 +1,65 @@
+---
+layout: default
+title: SDKs and Plugins
+---
+# SDK Reference
+
+**[AllPlayers SDK for Ruby](http://rubygems.org/gems/allplayers)**
+
+The AllPlayers API Client gem can be installed simply by running <code>sudo gem install allplayers</code>.
+Its open source and is available on [GitHub](https://github.com/AllPlayers/allplayers.rb).
+
+**[AllPlayers SDK for PHP](https://github.com/AllPlayers/allplayers.php)**
+
+AllPlayers PHP Client available on [GitHub](https://github.com/AllPlayers/allplayers.php).
+
+**[AllPlayers SDK for JetPay](https://packagist.org/packages/allplayers/jetpay)**
+
+PHP 5.3+ library for interacting with JetPay XML API.
+
+**[AllPlayers SDK for JAVA](https://github.com/AllPlayers/allplayers.java)**
+
+AllPlayers API Client available on [GitHub](https://github.com/AllPlayers/allplayers.java).
+
+**[AllPlayers SDK for Javascript](https://github.com/AllPlayers/allplayers.js)**
+
+AllPlayers SDK library written in javascript and is available on [GitHub](https://github.com/AllPlayers/allplayers.js).
+
+Library for
+
+**[AllPlayers SDK for iOS (Alpha)](https://github.com/AllPlayers/AllPlayers-ios-sdk)**
+
+IOS Software Dev Kit for Connecting to AllPlayers APIs. This is still in development and available on [GitHub](https://github.com/AllPlayers/AllPlayers-ios-sdk).
+
+**[AllPlayers SDK for Android](https://github.com/AllPlayers/allplayers-android)**
+
+AllPlayers.com Android App is available on [GitHub](https://github.com/AllPlayers/allplayers-android).
+
+# Plugins
+
+**[AllPlayers Drupal](http://drupal.org/project/allplayers)**
+
+This module provides integration to AllPlayers.com APIs via sign-in with OAuth. This allows interaction with API components with credentials. Additionally, this allows sign-in on behalf of an AllPlayers.com user account.
+
+**[AllPlayers Connect for Wordpress](http://wordpress.org/extend/plugins/allplayerscom-connect/)**
+
+AllPlayers.com Connect uses OAuth to offer a simple sign-on which results in a verified user and confirmed email address. This allows your WordPress site to use the AllPlayers.com API on behalf of your authenticated users.
+
+**[AllPlayers Joomla](https://github.com/AllPlayers/joomla-allplayers)**
+
+The component provides authentication functionality, and the ability to view profiles from the RESTful AllPlayers API. The module simply allows a profile link (with OAuth integration) anywhere on the site. The plugin is required by the component and allows for the authentication piece to work within Joomla.
+The project is open source and available on [GitHub](https://github.com/AllPlayers/joomla-allplayers).
+
+**[AllPlayers Importer Gem](http://rubygems.org/gems/allplayers_importer)**
+
+The AllPlayers Importer gem can be installed by running <code>sudo gem install allplayers_importer</code>, containing a set of tools for spreadsheet and data handling used for
+importing users, groups, etc.. into AllPlayers.com and is available on [GitHub](https://github.com/AllPlayers/allplayers_importer.rb).
+
+**[AllPlayers Omniauth](http://rubygems.org/gems/omniauth-allplayers)**
+
+The AllPlayers Omniauth gem allows the user to connect to allplayers seamlessly using oauth and is available on [GitHub](https://github.com/AllPlayers/omniauth-allplayers).
+
+**[AllPlayers Node.js Passport (Alpha)](git@github.com:AllPlayers/passport-allplayers.git)**
+
+Passport strategy for authenticating with AllPlayers.com using the OAuth 1.0 API. Available on [GitHub](git@github.com:AllPlayers/passport-allplayers.git).
+
