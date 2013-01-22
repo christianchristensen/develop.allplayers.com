@@ -76,6 +76,14 @@ $ curl -c cjar -d 'email=EMAIL&password=PASSWORD' \
 
 AllPlayers.com uses [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) to uniquely identify all objects in the system. Referencing `{uuid}` in documentation is a placeholder for the 32 digit identifier (e.g. `550e8400-e29b-41d4-a716-446655440000`).
 
+## Use of the ?offset addition ##
+
+With groups, the offset is the number of groups from the beginning you want to start with.
+
+An offset of 1 will give back groups 2 through a max of 11,
+An offset of 2 will give back groups 3 through a max of 12,
+and etc.
+
 ## JSON callbacks ##
 
 If you send a `:format` of `.jsonp` a 'callback' variable to any call, it will wrap the result JSON in that function, so you can automatically execute it.
