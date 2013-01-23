@@ -141,21 +141,23 @@ $ curl -b cjar
 Input:
 
 *  `options` (array)
-   *  dashboard
-   *  boxes
-   *  group_roles
-   *  registration_settings
-*  `title` (Bool)
-*  `description` (Bool)
-*  `location` (Bool)
-*  `category` (Bool)
-*  `active` (Bool)
-*  `groupmates_enabled` (Bool)
-*  `groups_above` (Bool)
-*  `group_logo` (Bool)
-*  `group_colors` (Bool)
+   *  `dashboard` (True)
+   *  `boxes` (True)
+   *  `group_roles` (True)
+   *  `registration_settings` (True)
+*  `title` (False)
+*  `description` (False)
+*  `location` (True)
+*  `category` (True)
+*  `active` (True)
+*  `groupmates_enabled` (True)
+*  `groups_above` (True)
+*  `group_logo` (True)
+*  `group_colors` (True)
 *  `forms` (array)
 *  `roles` (array)
+
+Note: All copy item fields are boolean (`0` / `1`) type unless otherwise noted.
 
 Copying group information allows you to copy settings from one group (for example: a template group) to another such that the web address, uuid, and other identifying information are preserved while items like the dashboard, look and feel, and registration settings are able to be re-used.
 
