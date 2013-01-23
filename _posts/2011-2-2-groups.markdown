@@ -223,6 +223,7 @@ Inputs:
 *  `org_webform_id`
 *  `role_name`
 *  `role_options`
+*  `send_message`
 
 Joining a user to a group requires that the authenticated user be an admin on the group they are joining the user to.
 Note: The joined user will recieve a notification "You have been added to Group Name on allplayers.com".
